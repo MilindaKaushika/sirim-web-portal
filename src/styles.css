@@ -72,9 +72,16 @@ html, body {
   --sirim-input-placehoder: #9CA3AF;
   --sirim-input-value-color: #1F2937;
 
+  /*Mat-Checkbox*/
+  --sirim-checkbox-stock: #111827;
+
   /*Scroll-bar*/
   --sirim-scroll-bar: #f5f5f5;
   --sirim-scroll-bar-thumb: #cccccc;
+
+  /*Mat-Button*/
+  --sirim-button-color: #ffffff;
+  --secondary-large-btn: #1E1B8C;
 
   /*Opacity Reduce Colors*/
   --sirim-secondary-bg-btn: rgba(30, 27, 140, 0.25);
@@ -159,12 +166,19 @@ html, body {
   --sirim-input-bg-disable: #F3F4F6;
   --sirim-input-placehoder: #9CA3AF;
   --sirim-input-value-color: #F3F4F6;
+
+  /*Mat-Checkbox*/
+  --sirim-checkbox-stock: #111827;
+
+  /*Mat-Button*/
+  --sirim-button-color: #ffffff;
+  --secondary-large-btn: #ffffff;
 }
 
 /*Primary Buttons List*/
 .primary-large-btn {
   background-color: var(--sirim-blue-color);
-  color: var(--sirim-bg-base);
+  color: var(--sirim-button-color);
   font-size: var(--bold-medium-font);
   height: 3rem; /* 48px */
   border-radius: 4px;
@@ -177,7 +191,7 @@ html, body {
 
 .primary-default-btn {
   background-color: var(--sirim-blue-color);
-  color: var(--sirim-bg-base);
+  color: var(--sirim-button-color);
   font-size: var(--bold-default-font);
   height: 2.5rem; /* 40px */
   border-radius: 4px;
@@ -190,7 +204,7 @@ html, body {
 
 .primary-small-btn {
   background-color: var(--sirim-blue-color);
-  color: var(--sirim-bg-base);
+  color: var(--sirim-button-color);
   font-size: var(--bold-small-font);
   height: 2rem; /* 32px */
   border-radius: 4px;
@@ -203,7 +217,7 @@ html, body {
 
 .primary-xs-small-btn {
   background-color: var(--sirim-blue-color);
-  color: var(--sirim-bg-base);
+  color: var(--sirim-button-color);
   font-size: var(--bold-extra-small-font);
   height: 1.5rem; /* 24px */
   border-radius: 4px;
@@ -234,8 +248,8 @@ html, body {
 /*Secondary Button List*/
 .secondary-large-btn {
   background-color: transparent;
-  border: 1px solid var(--sirim-blue-color) !important;
-  color: var(--sirim-blue-color);
+  border: 1px solid var(--secondary-large-btn) !important;
+  color: var(--secondary-large-btn);
   font-size: var(--bold-medium-font);
   height: 3rem; /* 48px */
   border-radius: 4px;
@@ -248,8 +262,8 @@ html, body {
 
 .secondary-default-btn {
   background: transparent;
-  border: 1px solid var(--sirim-blue-color) !important;
-  color: var(--sirim-blue-color);
+  border: 1px solid var(--secondary-large-btn) !important;
+  color: var(--secondary-large-btn);
   font-size: var(--bold-default-font);
   height: 2.5rem; /* 40px */
   border-radius: 4px;
@@ -262,8 +276,8 @@ html, body {
 
 .secondary-small-btn {
   background: transparent;
-  border: 1px solid var(--sirim-blue-color) !important;
-  color: var(--sirim-blue-color);
+  border: 1px solid var(--secondary-large-btn) !important;
+  color: var(--secondary-large-btn);
   font-size: var(--bold-small-font);
   height: 2rem; /* 32px */
   border-radius: 4px;
@@ -276,8 +290,8 @@ html, body {
 
 .secondary-xs-small-btn {
   background: transparent;
-  border: 1px solid var(--sirim-blue-color) !important;
-  color: var(--sirim-blue-color);
+  border: 1px solid var(--secondary-large-btn) !important;
+  color: var(--secondary-large-btn);
   font-size: var(--bold-extra-small-font);
   height: 1.5rem; /* 24px */
   border-radius: 4px;
@@ -309,7 +323,7 @@ html, body {
 /*Special Button List*/
 .success-btn {
   background: var(--sirim-success-primary);
-  color: var(--sirim-bg-base);
+  color: var(--sirim-button-color);
   font-size: var(--regular-default-font);
   height: 2.5rem; /* 40px */
   border-radius: 4px;
@@ -322,7 +336,7 @@ html, body {
 
 .warning-btn {
   background: var(--sirim-warning-primary);
-  color: var(--sirim-bg-base);
+  color: var(--sirim-button-color);
   font-size: var(--regular-default-font);
   height: 2.5rem; /* 40px */
   border-radius: 4px;
@@ -335,7 +349,7 @@ html, body {
 
 .error-btn {
   background: var(--sirim-error-primary);
-  color: var(--sirim-bg-base);
+  color: var(--sirim-button-color);
   font-size: var(--regular-default-font);
   height: 2.5rem; /* 40px */
   border-radius: 4px;
@@ -348,7 +362,7 @@ html, body {
 
 .info-btn {
   background: var(--sirim-info-primary);
-  color: var(--sirim-bg-base);
+  color: var(--sirim-button-color);
   font-size: var(--regular-default-font);
   height: 2.5rem; /* 40px */
   border-radius: 4px;
@@ -391,7 +405,7 @@ html, body {
 }
 
 .mat-checkbox-checked .mat-checkbox-checkmark-path {
-  stroke: var(--sirim-text-strong) !important;
+  stroke: var(--sirim-checkbox-stock) !important;
 }
 
 .mat-checkbox-disabled .mat-checkbox-frame {
@@ -426,6 +440,7 @@ html, body {
 
 .mat-radio-label-content {
   font-size: var(--regular-default-font);
+  color: var(--sirim-input-value-color);
 }
 
 .mat-radio-button.mat-radio-disabled .mat-radio-label-content {
@@ -754,4 +769,32 @@ tr.mat-row:hover {
   border-top: 3.5px solid !important;
   margin: 0 3.5px !important;
   color: var(--sirim-text-muted) !important;
+}
+
+.mat-select-value {
+  color: var(--sirim-input-value-color);
+}
+
+.mat-select-placeholder {
+  color: var(--sirim-input-placehoder);
+}
+
+.mat-select-arrow {
+  color: var(--sirim-input-placehoder);
+}
+
+.mat-select-panel {
+  background: var(--sirim-bg-base);
+}
+
+.mat-option.mat-active {
+  color: var(--sirim-text-subtle)!important;
+}
+
+.mat-select-panel .mat-option.mat-selected:not(.mat-option-multiple) {
+  background: var(--sirim-input-bg);
+}
+
+.mat-option {
+  color: var(--sirim-text-subtle)!important;
 }

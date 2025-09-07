@@ -1,1 +1,39 @@
-<p>dashboard-coaapplication works!</p>
+<mat-form-field appearance="outline">
+  <input matInput placeholder="Input placeholder"/>
+</mat-form-field>
+
+
+<mat-form-field appearance="outline">
+  <mat-select placeholder="Status" >
+    <mat-option value="1">Active</mat-option>
+    <mat-option value="2">Inactive</mat-option>
+    <mat-option value="3">Active</mat-option>
+  </mat-select>
+</mat-form-field>
+
+<mat-radio-group aria-label="Select an option">
+  <mat-radio-button value="1" [disabled]="false">Radio Button Label (Unchecked)</mat-radio-button>
+  <mat-radio-button value="2" [disabled]="true">Option 2</mat-radio-button>
+</mat-radio-group>
+
+<mat-checkbox class="custom-checkbox">
+  I agree to the terms and conditions
+</mat-checkbox>
+<mat-checkbox class="custom-checkbox" disabled>
+  I agree to the terms and conditions
+</mat-checkbox>
+
+<button mat-button class="primary-large-btn">Mat-Buttons</button>
+<button mat-button class="primary-default-btn">Mat-Buttons</button>
+<button mat-button class="primary-small-btn">Mat-Buttons</button>
+<button mat-button class="primary-xs-small-btn">Mat-Buttons</button>
+
+<button mat-button class="secondary-large-btn">Mat-Buttons</button>
+<button mat-button class="secondary-default-btn">Mat-Buttons</button>
+<button mat-button class="secondary-small-btn">Mat-Buttons</button>
+<button mat-button class="secondary-xs-small-btn">Mat-Buttons</button>
+
+<button mat-button class="success-btn">Mat-Buttons</button>
+<button mat-button class="warning-btn">Mat-Buttons</button>
+<button mat-button class="error-btn">Mat-Buttons</button>
+<button mat-button class="info-btn ">Mat-Buttons</button>
