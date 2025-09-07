@@ -10,6 +10,13 @@
     </div>
   </ul>
   <div class="nav-right">
+    <div (click)="toggleTheme()" class="theme-toggle-btn">
+      <i
+        class="bx"
+        [ngClass]="themeService.isDarkMode ? 'bx-sun' : 'bx-moon'"
+        [attr.aria-label]="themeService.isDarkMode ? 'Light Mode' : 'Dark Mode'"
+      ></i>
+    </div>
     <div class="bell-btn" *ngIf="true">
       <img class="bell" ngSrc="assets/icons/bell.svg" alt="" height="32" width="28">
       <div class="bell-badge">

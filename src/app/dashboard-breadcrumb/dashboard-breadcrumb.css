@@ -12,7 +12,7 @@
 }
 
 .breadcrumb-bar-path {
-  color: var(--sirim-blue-color);
+  color: var(--sirim-blue-text-color);
   font-weight: 400;
   font-size: var(--regular-default-font);
 }
@@ -55,7 +55,7 @@ p {
 }
 
 .path-list p {
-  color: var(--sirim-blue-color);
+  color: var(--sirim-blue-text-color);
   font-size: var(--regular-default-font);
 }
 
@@ -65,7 +65,7 @@ p {
 
 @media (max-width: 350px) {
   .breadcrumb-bar-path {
-    max-width: 237px;
+    max-width: 237px!important;
   }
 }
 
@@ -98,6 +98,7 @@ p {
 @media (max-width: 755px) {
   .menu-toggle {
     display: block;
+    color: var(--sirim-text-strong);
     left: 20px;
     font-size: 1.75rem;
     cursor: pointer;

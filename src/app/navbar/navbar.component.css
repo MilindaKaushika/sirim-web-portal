@@ -12,6 +12,19 @@ header {
   transition: all .4s ease;
 }
 
+.theme-toggle-btn {
+  color: var(--sirim-text-muted);
+  border-radius: 50%;
+  display: flex;
+  font-size: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  cursor: pointer;
+  height: 30px;
+  transform: scale(1.2);
+}
+
 .logo {
   width: 100%;
   max-width: 150px;
@@ -41,6 +54,7 @@ dl, ol, ul {
   display: inline-block;
   margin: 0 16px;
   font-weight: 700;
+  color: var(--sirim-text-subtle);
   font-size: var(--regular-medium-font);
   line-height: 18px;
   cursor: pointer;
@@ -114,8 +128,8 @@ dl, ol, ul {
   position: relative;
   align-items: center;
   justify-content: center;
-  background: var(--mat-table-header);
-  box-shadow: 0 0 5px 0 var(--bavbar-logout-btn);
+  background: var(--mat-logout-btn);
+  box-shadow: 0 0 5px 0 var(--sirim-logout-btn);
   gap: 8px;
   width: 187px;
   height: 48px;
@@ -172,7 +186,7 @@ dl, ol, ul {
   left: 0;
   right: 0;
   margin-top: 1.2rem;
-  border: 1px solid var(--bavbar-logout-btn);
+  border: 1px solid var(--sirim-logout-btn);
   background-color: var(--sirim-bg-base);
   width: 187px;
   height: 116px;
@@ -233,11 +247,12 @@ dl, ol, ul {
 #menu-icon {
   font-size: 34px;
   z-index: 10001;
+  color: var(--sirim-text-strong);
   cursor: pointer;
   display: none;
 }
 
-@media (max-width: 943px) {
+@media (max-width: 980px) {
   .logo {
     max-width: 120px;
     margin-right: 10px;
@@ -247,6 +262,10 @@ dl, ol, ul {
   .nav-list li a {
     margin: 0 8px !important;
     font-size: 0.813rem !important;
+  }
+
+  .btn {
+    width: 165px;
   }
 }
 

@@ -61,9 +61,16 @@ html, body {
   --sirim-row-hover: #F3F4F6;
   --sirim-bg-color: #FFFFFF;
 
+  /*Special Colors*/
+  --mat-logout-btn: #E9E8F4;
+  --navbar-hover-color: #E5E5EB;
+  --sirim-blue-text-color: #1E1B8C;
+
   /*Mat-Input*/
   --sirim-input-bg: #FFFFFF;
   --sirim-input-bg-disable: #F3F4F6;
+  --sirim-input-placehoder: #9CA3AF;
+  --sirim-input-value-color: #1F2937;
 
   /*Scroll-bar*/
   --sirim-scroll-bar: #f5f5f5;
@@ -71,7 +78,7 @@ html, body {
 
   /*Opacity Reduce Colors*/
   --sirim-secondary-bg-btn: rgba(30, 27, 140, 0.25);
-  --bavbar-logout-btn: rgba(156, 163, 175, 0.5);
+  --sirim-logout-btn: rgba(156, 163, 175, 0.5);
   --dropdown-menu-list-inershadow: rgba(0, 0, 0, 0.1);
   --dropdown-menu-list-outershadow: rgba(0, 0, 0, 0.05);
 
@@ -141,6 +148,17 @@ html, body {
   --sirim-extra-green: #22C55E;
   --sirim-extra-red: #F87171;
   --sirim-extra-gray: #94A3B8;
+
+  /*Special Colors*/
+  --mat-logout-btn: #334155;
+  --navbar-hover-color: #64748B;
+  --sirim-blue-text-color: #ffffff;
+
+  /*Mat-Input*/
+  --sirim-input-bg: #475569;
+  --sirim-input-bg-disable: #F3F4F6;
+  --sirim-input-placehoder: #9CA3AF;
+  --sirim-input-value-color: #F3F4F6;
 }
 
 /*Primary Buttons List*/
@@ -671,6 +689,12 @@ tr.mat-row:hover {
 
 .mat-form-field-appearance-outline .mat-form-field-outline {
   background-color: var(--sirim-input-bg) !important;
+  border-radius: 5px;
+}
+
+.mat-form-field input::placeholder {
+  color: var(--sirim-input-placehoder);
+  opacity: 1;
 }
 
 .mat-form-field-disabled .default-icon-size {
@@ -687,6 +711,7 @@ tr.mat-row:hover {
   display: block;
   position: relative;
   font-size: var(--regular-default-font);
+  color: var(--sirim-input-value-color);
   flex: auto;
   min-width: 0;
   width: 180px;

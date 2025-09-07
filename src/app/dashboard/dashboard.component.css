@@ -73,12 +73,12 @@
 }
 
 .main-container .left-sidebar .slide-btn:hover {
-  background: var(--mat-table-border-line);
+  background: var(--navbar-hover-color);
 }
 
 .main-container .left-sidebar .slide-btn.active {
-  background: var(--mat-table-border-line);
-  color: var(--sirim-blue-color);
+  background: var(--navbar-hover-color);
+  color: var(--sirim-blue-text-color);
 }
 
 .menu-toggle {
@@ -88,7 +88,11 @@
 .left-sidebar p {
   margin-bottom: 10px;
   font-size: var(--bold-default-font);
-  font-weight: 700;
+  font-weight: 400;
+}
+
+.left-sidebar .topic-color{
+  color: var(--sirim-text-strong);
 }
 
 @media (max-width: 755px) {

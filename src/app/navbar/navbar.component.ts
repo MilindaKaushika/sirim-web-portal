@@ -1,6 +1,6 @@
 import { Component, OnInit,HostListener } from '@angular/core';
 import { Router } from '@angular/router';
-
+import { ThemeService } from 'src/app/services/theme.service';
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -9,10 +9,14 @@ import { Router } from '@angular/router';
 export class NavbarComponent implements OnInit {
   menuOpen = false;
   isDropdownOpen = false;
-  constructor(private router: Router) {}
+  constructor(private router: Router,public themeService: ThemeService) {}
 
   toggleDropdown() {
     this.isDropdownOpen = !this.isDropdownOpen;
+  }
+
+  toggleTheme(): void {
+    this.themeService.toggleTheme();
   }
 
   closeDropdown(): void {
