@@ -63,15 +63,35 @@ p {
   color: var(--sirim-text-subtle);
 }
 
-@media (max-width: 600px) {
-  .breadcrumb-bar-path {
-    max-width: 280px;
-  }
-}
-
 @media (max-width: 350px) {
   .breadcrumb-bar-path {
     max-width: 237px;
+  }
+}
+
+@media (max-width: 696px) {
+  .breadcrumb-bar-path {
+    max-width: 280px;
+  }
+
+  p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  p:hover {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: unset;
+    z-index: 1;
+    position: relative;
+  }
+}
+
+@media (max-width: 600px) {
+  .breadcrumb-bar-path {
+    max-width: 280px;
   }
 }
 
@@ -92,20 +112,6 @@ p {
   }
 
   h2:hover {
-    white-space: normal;
-    overflow: visible;
-    text-overflow: unset;
-    z-index: 1;
-    position: relative;
-  }
-
-  p {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-
-  p:hover {
     white-space: normal;
     overflow: visible;
     text-overflow: unset;
