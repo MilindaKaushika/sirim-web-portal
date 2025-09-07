@@ -1,0 +1,13 @@
+.table-container {
+  height: 250px;
+  overflow: auto;
+  position: relative;
+  border-radius: 10px !important;
+  box-shadow: 0 0 4px 0 var(--mat-table-shadow);
+}
+
+.table-container.no-scroll {
+  overflow-y: hidden !important;
+  word-break: break-word;
+  height: 240px;
+}

@@ -1,0 +1,116 @@
+.main-container {
+  display: flex;
+  box-sizing: border-box;
+  margin-top: 275px;
+  padding: 0 8%;
+  margin-bottom: 20px;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-container .left-sidebar {
+  width: 200px;
+  height: calc(100vh - 275px);
+  position: fixed;
+  top: 275px;
+  overflow: hidden;
+  overflow-y: scroll;
+  background: var(--sirim-bg-raised);
+  overscroll-behavior: contain;
+  box-sizing: border-box;
+}
+
+.main-container .left-sidebar::-webkit-scrollbar {
+  width: 7px;
+}
+
+.main-container .left-sidebar::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background: var(--sirim-scroll-bar);
+}
+
+.main-container .left-sidebar:hover::-webkit-scrollbar-thumb {
+  background: var(--sirim-scroll-bar-thumb);
+}
+
+.main-container .right-sidebar {
+  margin-left: 200px;
+  width: calc(100% - 200px);
+  /*height: calc(100vh - 135px);*/
+  padding: 0 10px;
+  overscroll-behavior: contain;
+  box-sizing: border-box;
+}
+
+.main-container .right-sidebar ::-webkit-scrollbar {
+  width: 0;
+}
+
+.main-container .left-sidebar .slide-btn {
+  display: flex;
+  align-items: center;
+  color: var(--sirim-text-subtle);
+  font-size: var(--regular-default-font);
+  gap: 12px;
+  margin-bottom: 4px;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.main-container .left-sidebar .slide-btn mat-icon {
+  width: 16px;
+}
+
+.main-container .left-sidebar .slide-btn p {
+  font-size: var(--regular-default-font);
+  padding: 0;
+  margin: 0;
+}
+
+.main-container .left-sidebar .slide-btn:hover {
+  background: var(--mat-table-border-line);
+}
+
+.main-container .left-sidebar .slide-btn.active {
+  background: var(--mat-table-border-line);
+  color: var(--sirim-blue-color);
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.left-sidebar p {
+  margin-bottom: 10px;
+  font-size: var(--bold-default-font);
+  font-weight: 700;
+}
+
+@media (max-width: 755px) {
+  .left-sidebar {
+    position: fixed;
+    left: -100%;
+    background-color: var(--sirim-bg-base) !important;
+    height: calc(100vh - 247px) !important;
+    top: 247px !important;
+    width: 220px !important;
+    padding: 10px !important;
+    z-index: 600;
+  }
+
+  .left-sidebar.show {
+    left: 0;
+  }
+
+  .main-container .right-sidebar {
+    margin-left: 0;
+    padding: 0;
+    width: 100%;
+  }
+}

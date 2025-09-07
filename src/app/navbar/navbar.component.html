@@ -1,0 +1,54 @@
+<body>
+<header>
+  <ul>
+    <img class="logo" ngSrc="assets/images/logo.png" alt="" height="48" width="197">
+    <div class="nav-list" [class.open]="menuOpen">
+      <li><a>Home</a></li>
+      <li><a>About Us</a></li>
+      <li><a>FAQ</a></li>
+      <li><a>Contact Us</a></li>
+    </div>
+  </ul>
+  <div class="nav-right">
+    <div class="bell-btn" *ngIf="true">
+      <img class="bell" ngSrc="assets/icons/bell.svg" alt="" height="32" width="28">
+      <div class="bell-badge">
+        <div class="badge-circle">
+          02
+        </div>
+      </div>
+    </div>
+
+    <button mat-button class="primary-small-btn" *ngIf="false">Log In</button>
+
+    <div class="btn" tabindex="0" *ngIf="true">
+      <div class="profile-img">
+        <img src="assets/images/pro-img.png">
+      </div>
+      <div class="user-info">
+        <div class="user-name">Shahir Zayyad</div>
+        <div class="user-role">importer</div>
+      </div>
+      <img src="assets/icons/down-arrow.svg" alt="" class="logout-icon" [class.rotated]="isDropdownOpen"
+           (click)="toggleDropdown()">
+      <div class="dropdown-menu-list" *ngIf="isDropdownOpen">
+        <div class="dropdown-item" (click)="closeDropdown()">
+          <div class="icon"><img ngSrc="assets/icons/pro-icon.svg" alt="" height="16" width="16"></div>
+          Profile Settings
+        </div>
+        <div class="dropdown-item" (click)="closeDropdown()">
+          <div class="icon"><img ngSrc="assets/icons/setting.svg" alt="" height="16" width="16"></div>
+          Account Settings
+        </div>
+        <div class="line"></div>
+        <div class="dropdown-item" (click)="onLogout()">
+          <div class="icon"><img ngSrc="assets/icons/logout.svg" alt="" height="16" width="16"></div>
+          <p>Log Out</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="bx bx-menu" id="menu-icon" [class.bx-x]="menuOpen" (click)="toggleMenu()"></div>
+  </div>
+</header>
+</body>

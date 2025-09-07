@@ -1,0 +1,123 @@
+.breadcrumb-bar {
+  position: fixed;
+  background: var(--sirim-bg-raised);
+  top: 108px;
+  right: 0;
+  width: 100%;
+  z-index: 900;
+  padding: 32px 8%;
+  display: flex;
+  justify-content: space-between;
+  transition: all .4s ease;
+}
+
+.breadcrumb-bar-path {
+  color: var(--sirim-blue-color);
+  font-weight: 400;
+  font-size: var(--regular-default-font);
+}
+
+h2 {
+  font-size: var(--h2-large-medium-black-font);
+  font-weight: 900;
+  word-break: break-word;
+  color: var(--sirim-text-strong);
+}
+
+p {
+  color: var(--sirim-text-subtle);
+  font-weight: 400;
+  word-break: break-word;
+  font-size: var(--regular-default-font);
+  padding: 0;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.path-list {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.breadcrumb-bar-path .icons {
+  width: 13px;
+}
+
+.breadcrumb-bar-path .icon-small {
+  width: 5px;
+}
+
+.path-list p {
+  color: var(--sirim-blue-color);
+  font-size: var(--regular-default-font);
+}
+
+.breadcrumb-bar-path mat-icon {
+  color: var(--sirim-text-subtle);
+}
+
+@media (max-width: 600px) {
+  .breadcrumb-bar-path {
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 350px) {
+  .breadcrumb-bar-path {
+    max-width: 237px;
+  }
+}
+
+@media (max-width: 755px) {
+  .menu-toggle {
+    display: block;
+    left: 20px;
+    font-size: 1.75rem;
+    cursor: pointer;
+  }
+
+  h2 {
+    white-space: nowrap;
+    font-size: var(--h3-large-small-black-font);
+    overflow: hidden;
+    line-height: 25px;
+    text-overflow: ellipsis;
+  }
+
+  h2:hover {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: unset;
+    z-index: 1;
+    position: relative;
+  }
+
+  p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  p:hover {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: unset;
+    z-index: 1;
+    position: relative;
+  }
+
+  .path-list p:hover {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: unset;
+    z-index: 1;
+    position: relative;
+  }
+}

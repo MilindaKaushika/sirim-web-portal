@@ -1,0 +1,55 @@
+<app-navbar></app-navbar>
+<div class="page-wrapper">
+  <app-dashboard-breadcrumb (menuToggled)="onSidebarToggle($event)"></app-dashboard-breadcrumb>
+  <div class="main-container">
+    <div class="left-sidebar" [class.show]="menuOpen">
+      <div class="slide-btn" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+           routerLink="/dashboard/home">
+        <mat-icon svgIcon="menu"></mat-icon>
+        <p>Dashboard</p>
+      </div>
+      <div class="slide-btn" routerLinkActive="active" routerLink="/dashboard/coa-applications">
+        <mat-icon svgIcon="application"></mat-icon>
+        <p>COA Applications</p>
+      </div>
+      <div class="slide-btn">
+        <mat-icon svgIcon="mrf-application"></mat-icon>
+        <p>MRF Applications</p>
+      </div>
+      <div class="slide-btn">
+        <mat-icon svgIcon="quota"></mat-icon>
+        <p>Quota Requests</p>
+      </div>
+      <div class="slide-btn">
+        <mat-icon svgIcon="payment"></mat-icon>
+        <p>Payments & Invoices</p>
+      </div>
+      <div class="slide-btn">
+        <mat-icon svgIcon="certificate"></mat-icon>
+        <p>Certificates</p>
+      </div>
+      <div class="slide-btn">
+        <mat-icon svgIcon="guide"></mat-icon>
+        <p>Guides & Fees</p>
+      </div>
+
+      <p>Product Categories</p>
+      <div class="slide-btn">
+        <p>Flour</p>
+      </div>
+      <div class="slide-btn">
+        <p>Iron & Steel</p>
+      </div>
+      <div class="slide-btn">
+        <p>IMetal Scrap & Waste</p>
+      </div>
+      <div class="slide-btn">
+        <p>Tyre</p>
+      </div>
+    </div>
+    <div class="right-sidebar">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>
