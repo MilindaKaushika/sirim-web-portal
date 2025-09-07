@@ -232,6 +232,10 @@ dl, ol, ul {
   display: inline-block;
 }
 
+.icon {
+  width: 16px;
+}
+
 .logout-icon {
   transition: transform 0.3s ease;
 }

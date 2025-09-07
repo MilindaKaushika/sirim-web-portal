@@ -40,16 +40,16 @@
            (click)="toggleDropdown()">
       <div class="dropdown-menu-list" *ngIf="isDropdownOpen">
         <div class="dropdown-item" (click)="closeDropdown()">
-          <div class="icon"><img ngSrc="assets/icons/pro-icon.svg" alt="" height="16" width="16"></div>
+           <mat-icon svgIcon="profile" class="icon"></mat-icon>
           Profile Settings
         </div>
         <div class="dropdown-item" (click)="closeDropdown()">
-          <div class="icon"><img ngSrc="assets/icons/setting.svg" alt="" height="16" width="16"></div>
+          <mat-icon svgIcon="setting" class="icon"></mat-icon>
           Account Settings
         </div>
         <div class="line"></div>
         <div class="dropdown-item" (click)="onLogout()">
-          <div class="icon"><img ngSrc="assets/icons/logout.svg" alt="" height="16" width="16"></div>
+          <mat-icon svgIcon="logout" class="icon"></mat-icon>
           <p>Log Out</p>
         </div>
       </div>
