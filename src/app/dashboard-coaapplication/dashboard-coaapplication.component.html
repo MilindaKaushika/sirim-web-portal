@@ -45,3 +45,16 @@
   </div>
   <mat-datepicker #picker1></mat-datepicker>
 </mat-form-field>
+
+<mat-slide-toggle>Slide me!</mat-slide-toggle>
+
+<mat-form-field appearance="outline">
+  <input matInput [ngxTimepicker]="picker" placeholder="Select time" [readonly]="isDisabled"
+         [disabled]="isDisabled">
+
+  <div matSuffix (click)="!isDisabled && picker.open()"
+       [style.cursor]="isDisabled ? 'not-allowed' : 'pointer'">
+    <mat-icon svgIcon="clock" class="default-icon-size"></mat-icon>
+  </div>
+  <ngx-material-timepicker #picker></ngx-material-timepicker>
+</mat-form-field>

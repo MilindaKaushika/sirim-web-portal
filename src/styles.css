@@ -83,6 +83,10 @@ html, body {
   --sirim-button-color: #ffffff;
   --secondary-large-btn: #1E1B8C;
 
+  /*Clock*/
+  --sirim-clock-base: #1E1B8C;
+  --sirim-clock-active-color: #ffffff;
+
   /*Opacity Reduce Colors*/
   --sirim-secondary-bg-btn: rgba(30, 27, 140, 0.25);
   --sirim-logout-btn: rgba(156, 163, 175, 0.5);
@@ -173,6 +177,14 @@ html, body {
   /*Mat-Button*/
   --sirim-button-color: #ffffff;
   --secondary-large-btn: #ffffff;
+
+  /*Scroll-bar*/
+  --sirim-scroll-bar: #334155;
+  --sirim-scroll-bar-thumb: #212529;
+
+  /*Clock*/
+  --sirim-clock-base: #0F172A;
+  --sirim-clock-active-color: #ffffff;
 }
 
 /*Primary Buttons List*/
@@ -780,7 +792,7 @@ tr.mat-row:hover {
 }
 
 .mat-select-arrow {
-  color: var(--sirim-input-placehoder)!important;
+  color: var(--sirim-input-placehoder) !important;
 }
 
 .mat-select-panel {
@@ -839,4 +851,38 @@ tr.mat-row:hover {
 
 .mat-calendar-table-header-divider::after {
   background: var(--sirim-text-subtle) !important;
+}
+
+/*Material TimePicker*/
+.timepicker__header {
+  background: var(--sirim-blue-color) !important;
+}
+
+.timepicker__body {
+  background: var(--sirim-bg-base) !important;
+}
+
+.timepicker__actions {
+  background: var(--sirim-bg-base) !important;
+}
+
+.clock-face {
+  background: var(--sirim-bg-raised)!important;
+}
+
+.clock-face__number--outer > span {
+  color: var(--sirim-text-subtle) !important;;
+}
+
+.clock-face__number > span.active {
+  color: var(--sirim-clock-active-color)!important;
+  background: var(--sirim-clock-base)!important;
+}
+
+.clock-face__clock-hand{
+  background: var(--sirim-clock-base)!important;
+}
+
+.timepicker-button{
+  color: var(--sirim-text-subtle) !important;;
 }
