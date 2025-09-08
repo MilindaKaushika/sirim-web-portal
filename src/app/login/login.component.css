@@ -1,0 +1,43 @@
+.wrapper {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+.left-col, .right-col {
+  flex-basis: 50%;
+  height: 100vh;
+  position: relative;
+}
+
+.content {
+  position: absolute;
+  padding: 64px;
+  background-image: linear-gradient(
+    rgba(30, 27, 140, 0.65),
+    rgba(30, 27, 140, 0.65)
+  ),
+  url('/assets/images/login-img.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+.logo img{
+  width: 100%;
+  max-width: 73px;
+  margin-bottom: 37px;
+}
+
+.content h1{
+  line-height: 44px;
+  font-size: var(--h1-large-bold-font);
+  color: var(--sirim-gold-color);
+  font-weight: bold;
+}
