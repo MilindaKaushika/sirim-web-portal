@@ -37,3 +37,11 @@
 <button mat-button class="warning-btn">Mat-Buttons</button>
 <button mat-button class="error-btn">Mat-Buttons</button>
 <button mat-button class="info-btn ">Mat-Buttons</button>
+
+<mat-form-field appearance="outline" >
+  <input matInput [matDatepicker]="picker1" placeholder="Date of birth" >
+  <div matSuffix (click)="picker1.open()">
+    <mat-icon svgIcon="calendar" class="default-icon-size"></mat-icon>
+  </div>
+  <mat-datepicker #picker1></mat-datepicker>
+</mat-form-field>

@@ -762,7 +762,7 @@ tr.mat-row:hover {
   color: var(--sirim-text-muted);
 }
 
-/*Material Select Input*/
+/*Material Dropdown Input*/
 .small-size .mat-select-arrow {
   border-left: 3.5px solid transparent !important;
   border-right: 3.5px solid transparent !important;
@@ -780,7 +780,7 @@ tr.mat-row:hover {
 }
 
 .mat-select-arrow {
-  color: var(--sirim-input-placehoder);
+  color: var(--sirim-input-placehoder)!important;
 }
 
 .mat-select-panel {
@@ -788,7 +788,7 @@ tr.mat-row:hover {
 }
 
 .mat-option.mat-active {
-  color: var(--sirim-text-subtle)!important;
+  color: var(--sirim-text-subtle) !important;
 }
 
 .mat-select-panel .mat-option.mat-selected:not(.mat-option-multiple) {
@@ -796,5 +796,47 @@ tr.mat-row:hover {
 }
 
 .mat-option {
-  color: var(--sirim-text-subtle)!important;
+  color: var(--sirim-text-subtle) !important;
+}
+
+/*Material Datepicker Input*/
+.mat-datepicker-content {
+  background: var(--sirim-bg-base) !important;
+}
+
+.mat-datepicker-content table {
+  background: var(--sirim-bg-base) !important;
+}
+
+.mat-calendar-body-cell-content {
+  color: var(--sirim-text-subtle) !important;
+}
+
+.mat-calendar-header .mat-calendar-period-button {
+  color: var(--sirim-text-subtle) !important;
+}
+
+.mat-calendar-table-header th {
+  color: var(--sirim-text-subtle) !important;
+}
+
+.mat-calendar-previous-button,
+.mat-calendar-next-button {
+  color: var(--sirim-text-subtle) !important;
+}
+
+.mat-calendar-table-header, .mat-calendar-body-label {
+  color: var(--sirim-text-subtle) !important;
+}
+
+.mat-calendar-arrow {
+  fill: var(--sirim-text-subtle) !important;
+}
+
+.mat-calendar-body-selected {
+  background-color: var(--sirim-blue-color) !important;
+}
+
+.mat-calendar-table-header-divider::after {
+  background: var(--sirim-text-subtle) !important;
 }
