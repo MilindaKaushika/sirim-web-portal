@@ -635,6 +635,7 @@ tr.mat-row:hover {
 @media (max-width: 768px) {
   .table-container {
     overflow-x: hidden !important;
+    height: auto !important;
   }
 
   .mat-table[matTableResponsive] {
