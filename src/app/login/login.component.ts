@@ -8,7 +8,7 @@ import {DomSanitizer} from "@angular/platform-browser";
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-
+  hide = true;
   constructor(private router: Router,private iconRegistry: MatIconRegistry,
               private sanitizer: DomSanitizer) {
     iconRegistry.addSvgIcon(

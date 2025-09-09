@@ -442,6 +442,12 @@ html, body {
   font-size: var(--regular-default-font);
 }
 
+/*Material Custom-Checkbox Label Size*/
+.custom-checkbox .mat-checkbox-layout .mat-checkbox-label {
+  font-size: var(--regular-small-font);
+  font-weight: 700;
+}
+
 /*Material Radio Button*/
 .mat-radio-outer-circle {
   border-color: var(--sirim-text-muted);
@@ -560,10 +566,11 @@ tr.mat-header-row {
 
 .mat-cell, .mat-footer-cell {
   font-size: var(--bold-small-font);
-  color: var(--sirim-text-strong)!important;
+  color: var(--sirim-text-strong) !important;
   padding: 10px;
   word-break: break-word;
 }
+
 mat-row, mat-header-row, mat-footer-row, th.mat-header-cell, td.mat-cell, td.mat-footer-cell {
   border-bottom-color: var(--sirim-bg-edge);
 }
@@ -625,10 +632,10 @@ tr.mat-row:hover {
 }
 
 .mat-sort-header-arrow {
-  color: var(--sirim-text-strong)!important;
+  color: var(--sirim-text-strong) !important;
 }
 
-.mat-sort-header:hover .mat-sort-header-arrow{
+.mat-sort-header:hover .mat-sort-header-arrow {
   color: var(--sirim-text-strong) !important;
 }
 
@@ -733,11 +740,46 @@ tr.mat-row:hover {
   }
 }
 
-/*Material Input Field (Default) Size (40px)*/
-.mat-form-field-hide-placeholder .mat-form-field-label-wrapper {
-  top: -17px;
+/*Input Field (Large) Size (45px)*/
+.large-size .mat-form-field-infix {
+  display: block;
+  position: relative;
+  font-size: var(--regular-default-font);
+  flex: auto;
+  min-width: 0;
+  width: 180px;
+  height: 45px !important;
+}
+
+.large-size .default-icon-size {
+  width: 9px !important;
+  cursor: pointer
+}
+
+.mat-form-field-appearance-outline.large-size .mat-form-field-infix {
+  padding: 0.6em 0 0.6em 0 !important;
+}
+
+.large-size .mat-form-field-label-wrapper {
+  font-size: var(--regular-small-font) !important;
+  color: var(--sirim-text-muted);
+}
+
+.mat-form-field-hide-placeholder.large-size .mat-form-field-label-wrapper {
+  top: -10px !important;
   font-size: var(--regular-default-font);
   color: var(--sirim-text-muted);
+}
+
+/*Material Input Field (Default) Size (40px)*/
+.mat-form-field-hide-placeholder .mat-form-field-label-wrapper {
+  top: -17px !important;
+  font-size: var(--regular-default-font);
+  color: var(--sirim-text-muted);
+}
+
+.mat-form-field-wrapper {
+  padding-bottom: 0 !important;
 }
 
 .default-icon-size {
@@ -906,7 +948,7 @@ tr.mat-row:hover {
 }
 
 .clock-face {
-  background: var(--sirim-bg-raised)!important;
+  background: var(--sirim-bg-raised) !important;
 }
 
 .clock-face__number--outer > span {
@@ -914,14 +956,14 @@ tr.mat-row:hover {
 }
 
 .clock-face__number > span.active {
-  color: var(--sirim-clock-active-color)!important;
-  background: var(--sirim-clock-base)!important;
+  color: var(--sirim-clock-active-color) !important;
+  background: var(--sirim-clock-base) !important;
 }
 
-.clock-face__clock-hand{
-  background: var(--sirim-clock-base)!important;
+.clock-face__clock-hand {
+  background: var(--sirim-clock-base) !important;
 }
 
-.timepicker-button{
+.timepicker-button {
   color: var(--sirim-text-subtle) !important;;
 }
