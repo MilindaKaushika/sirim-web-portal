@@ -3,6 +3,7 @@
   width: 100%;
   height: 100%;
   box-sizing: border-box;
+  transition: all .40s ease;
 }
 
 .left-col, .right-col {
@@ -98,6 +99,7 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   background: rgba(30, 27, 140, 0.5);
   border: 1px solid var(--navbar-hover-color);
   width: 170px;
@@ -122,18 +124,21 @@
 
 .login-box-content {
   display: flex;
-  padding: 64px 128px;
   height: 100vh;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 32px;
   flex: 1 0 0;
+  transition: all .4s ease;
 }
 
 .login-box {
   display: flex;
   padding: 32px;
+  margin: auto;
+  width: 100%;
+  max-width: 464px;
   flex-direction: column;
   align-items: center;
   align-self: stretch;
@@ -174,11 +179,11 @@
   color: var(--sirim-text-default);
 }
 
-.primary-large-btn{
+.primary-large-btn {
   width: 100%;
   height: 2.813rem;
   margin-bottom: 32px;
-  border-radius: 5px!important;
+  border-radius: 5px !important;
 }
 
 .icon-gray {
@@ -186,7 +191,7 @@
   font-size: var(--regular-default-font);
 }
 
-.forgot-password-content{
+.forgot-password-content {
   display: flex;
   justify-content: space-between;
   margin-bottom: 32px;
@@ -194,23 +199,171 @@
   width: 100%;
 }
 
-.forgot-password .custom-checkbox{
+.forgot-password .custom-checkbox {
   margin: 0;
   font-weight: 700;
-  font-size: var(--regular-default-font)!important;
+  font-size: var(--regular-default-font) !important;
   color: var(--sirim-text-default);
 }
 
-.forgot-password p{
+.forgot-password p {
   margin: 0;
   font-weight: 700;
   color: var(--sirim-blue-color);
   font-size: var(--regular-small-font);
 }
 
-.border-line{
+.border-line {
   border: 1px solid var(--sirim-bg-edge);
   height: 1px;
   width: 100%;
   margin-bottom: 32px;
+}
+
+
+@media (max-width: 1132px) {
+  .content {
+    padding: 64px 35px;
+    transition: all .4s ease;
+  }
+
+  .content h1 {
+    font-size: var(--h2-large-medium-bold-font);
+    transition: all .4s ease;
+  }
+
+  .content h3 {
+    font-size: var(--h4-heading-large-font);
+    transition: all .4s ease;
+  }
+
+  .content p {
+    font-size: var(--regular-small-font);
+  }
+
+  .processing-list h5 {
+    font-size: var(--h6-heading-small-font);
+    transition: all .4s ease;
+  }
+
+  .box h2 {
+    font-size: var(--h3-large-small-bold-font);
+    transition: all .4s ease;
+  }
+
+  .counter-box {
+    gap: 20px;
+    transition: all .4s ease;
+  }
+
+  .counter-box .box {
+    padding: 5px;
+    transition: all .4s ease;
+  }
+
+  .login-box {
+    max-width: 385px;
+    transition: all .4s ease;
+  }
+}
+
+@media (max-width: 870px) {
+  .logo {
+    width: 60px;
+    transition: all .4s ease;
+  }
+
+  .content h1 {
+    font-size: var(--h3-large-small-bold-font);
+    line-height: 20px;
+    transition: all .4s ease;
+  }
+
+  .content h3 {
+    font-size: var(--h5-heading-medium-font);
+    transition: all .4s ease;
+  }
+
+  .login-box h2 {
+    font-size: var(--h3-large-small-bold-font);
+    transition: all .4s ease;
+  }
+
+  .login-box p {
+    font-size: var(--regular-small-font);
+    transition: all .4s ease;
+  }
+
+  .processing-list .icon-box {
+    width: 40px;
+    height: 40px;
+    transition: all .4s ease;
+  }
+
+  .processing-list .icon-box mat-icon {
+    width: 20px;
+    transition: all .4s ease;
+  }
+
+  .processing-list h5 {
+    font-size: var(--regular-default-font);
+    margin-bottom: 5px;
+    transition: all .4s ease;
+
+  }
+
+  .content p {
+    font-size: var(--regular-extra-small-font);
+    transition: all .4s ease;
+  }
+
+  .primary-large-btn {
+    margin-bottom: 15px;
+    transition: all .4s ease;
+  }
+
+  .login-box p {
+    margin-bottom: 15px;
+    transition: all .4s ease;
+  }
+
+  .forgot-password-content {
+    margin-bottom: 15px;
+    transition: all .4s ease;
+  }
+
+  .forgot-password-content p {
+    margin: 0;
+  }
+
+  .login-box {
+    max-width: 315px;
+    transition: all .4s ease;
+  }
+
+  .input-row .large-size {
+    width: 100%;
+    margin-bottom: 15px;
+    transition: all .4s ease;
+  }
+}
+
+@media (max-width: 730px) {
+  .left-col {
+    display: none;
+  }
+
+  .right-col {
+    flex-basis: 100%;
+    padding: 30px;
+  }
+
+  .login-box {
+    max-width: 435px;
+    transition: all .4s ease;
+  }
+
+  .login-box-content {
+    height: 100%;
+  }
 }
