@@ -124,7 +124,7 @@
 
 .login-box-content {
   display: flex;
-  height: 100vh;
+  min-height: 100svh;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -138,6 +138,7 @@
   padding: 32px;
   margin: auto;
   width: 100%;
+  text-align: left;
   max-width: 464px;
   flex-direction: column;
   align-items: center;
@@ -209,6 +210,7 @@
 .forgot-password p {
   margin: 0;
   font-weight: 700;
+  cursor: pointer;
   color: var(--sirim-blue-color);
   font-size: var(--regular-small-font);
 }
@@ -217,9 +219,35 @@
   border: 1px solid var(--sirim-bg-edge);
   height: 1px;
   width: 100%;
-  margin-bottom: 32px;
+  margin-bottom: 20px;
 }
 
+.sign-up p {
+  margin: 0;
+  font-size: var(--regular-small-font);
+}
+
+.sign-up span {
+  margin-left: 5px;
+  cursor: pointer;
+  color: var(--sirim-blue-color);
+  font-size: var(--regular-small-font);
+}
+
+.box-margin {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 100%;
+  text-align: center;
+  transition: all .4s ease;
+}
+
+.box-margin p {
+  color: var(--sirim-text-default);
+  font-size: var(--regular-small-font);
+  margin: 0;
+}
 
 @media (max-width: 1132px) {
   .content {
@@ -289,11 +317,6 @@
     transition: all .4s ease;
   }
 
-  .login-box p {
-    font-size: var(--regular-small-font);
-    transition: all .4s ease;
-  }
-
   .processing-list .icon-box {
     width: 40px;
     height: 40px;
@@ -314,16 +337,6 @@
 
   .content p {
     font-size: var(--regular-extra-small-font);
-    transition: all .4s ease;
-  }
-
-  .primary-large-btn {
-    margin-bottom: 15px;
-    transition: all .4s ease;
-  }
-
-  .login-box p {
-    margin-bottom: 15px;
     transition: all .4s ease;
   }
 
@@ -355,11 +368,12 @@
 
   .right-col {
     flex-basis: 100%;
-    padding: 30px;
+    padding: 15px;
   }
 
   .login-box {
     max-width: 435px;
+    padding: 17px;
     transition: all .4s ease;
   }
 
