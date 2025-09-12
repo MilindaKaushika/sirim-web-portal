@@ -1,2 +1,123 @@
-<p>create-account works!</p>
-<button mat-button (click)="goToLogin()">Back to Login</button>
+<form>
+  <div class="wrapper">
+    <div class="left-col">
+      <div class="content">
+        <div class="logo">
+          <img src="assets/images/logo-main.jpg" alt="">
+        </div>
+        <h1>Certificate of Approval</h1>
+        <h3>Management System</h3>
+        <p>Experience the next generation of digital certification with AI-powered workflows, real-time collaboration,
+          and
+          seamless compliance management.</p>
+        <div class="processing-list">
+          <div class="icon-box">
+            <mat-icon svgIcon="lightning"></mat-icon>
+          </div>
+          <div class="icon-content">
+            <h5>Lightning-fast Processing</h5>
+            <p>AI-powered automation reduces processing time by 70%</p>
+          </div>
+        </div>
+        <div class="processing-list">
+          <div class="icon-box">
+            <mat-icon svgIcon="world"></mat-icon>
+          </div>
+          <div class="icon-content">
+            <h5>Global Compliance Standards</h5>
+            <p>Meets international certification requirements</p>
+          </div>
+        </div>
+        <div class="processing-list">
+          <div class="icon-box">
+            <mat-icon svgIcon="badge"></mat-icon>
+          </div>
+          <div class="icon-content">
+            <h5>Premium Security</h5>
+            <p>Bank-level encryption and audit trails
+            </p>
+          </div>
+        </div>
+        <div class="counter-box">
+          <div class="box">
+            <h2>15K +</h2>
+            <p>Applications Processed</p>
+          </div>
+          <div class="box">
+            <h2>99.9%</h2>
+            <p>System Reliability</p>
+          </div>
+          <div class="box">
+            <h2>24/7</h2>
+            <p>Expert Support Available</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="right-col">
+      <div class="create-box-content">
+        <div class="box-margin">
+          <div class="create-box">
+            <h2>Create Account</h2>
+            <p>Register as Importer, Manufacturer, or Agent</p>
+            <div class="user-type-box">
+              <div class="fist-row">
+                <div class="icon-box">
+                  <mat-icon svgIcon="importer"></mat-icon>
+                </div>
+                <div class="content-text">
+                  <h2>Importer</h2>
+                  <p>Local companies submitting COA applications</p>
+                </div>
+              </div>
+              <div class="second-row">
+                <button mat-icon-button class="custom-icon-button">
+                  <mat-icon svgIcon="right"></mat-icon>
+                </button>
+              </div>
+            </div>
+            <div class="user-type-box">
+              <div class="fist-row">
+                <div class="icon-box">
+                  <mat-icon svgIcon="manufacturer"></mat-icon>
+                </div>
+                <div class="content-text">
+                  <h2>Manufacturer</h2>
+                  <p>Foreign or local product manufacturers</p>
+                </div>
+              </div>
+              <div class="second-row">
+                <button mat-icon-button class="custom-icon-button">
+                  <mat-icon svgIcon="right"></mat-icon>
+                </button>
+              </div>
+            </div>
+            <div class="user-type-box">
+              <div class="fist-row">
+                <div class="icon-box">
+                  <mat-icon svgIcon="agent"></mat-icon>
+                </div>
+                <div class="content-text">
+                  <h2>Agent</h2>
+                  <p>Authorized third-party representatives</p>
+                </div>
+              </div>
+              <div class="second-row">
+                <button mat-icon-button class="custom-icon-button">
+                  <mat-icon svgIcon="right"></mat-icon>
+                </button>
+              </div>
+            </div>
+            <div class="border-line"></div>
+            <div class="sign-in">
+              <p>Already have an account?<span (click)="goSignIn()">Sign In</span></p>
+            </div>
+          </div>
+          <div class="footer-name">
+            <p> © 2025 SIRIM Berhad. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
