@@ -124,6 +124,7 @@
 
 .login-box-content {
   display: flex;
+  padding: 64px 0;
   min-height: 100svh;
   flex-direction: column;
   justify-content: center;
@@ -153,14 +154,14 @@
   font-weight: bold;
   padding: 0;
   margin-bottom: 4px;
-  font-size: var(--h2-large-medium-bold-font);
+  font-size: var(--h2-large-medium-bold-font) !important;
 }
 
 .login-box p {
   color: var(--sirim-text-muted);
   font-weight: 400;
   margin-bottom: 32px;
-  font-size: var(--regular-medium-font);
+  font-size: var(--regular-medium-font) !important;
 }
 
 .input-row {
@@ -176,8 +177,8 @@
   line-height: 16px;
   margin-bottom: 5px;
   font-weight: 700;
-  font-size: var(--regular-default-font);
-  color: var(--sirim-text-default);
+  font-size: var(--regular-default-font) !important;
+  color: var(--sirim-text-default) !important;
 }
 
 .primary-large-btn {
@@ -211,12 +212,12 @@
   margin: 0;
   font-weight: 700;
   cursor: pointer;
-  color: var(--sirim-blue-color);
-  font-size: var(--regular-small-font);
+  color: var(--sirim-blue-color) !important;
+  font-size: var(--regular-small-font) !important;
 }
 
 .border-line {
-  border: 1px solid var(--sirim-bg-edge);
+  background: url("/assets/icons/line.svg");
   height: 1px;
   width: 100%;
   margin-bottom: 20px;
@@ -224,13 +225,14 @@
 
 .sign-up p {
   margin: 0;
-  font-size: var(--regular-small-font);
+  color: var(--sirim-text-subtle) !important;
+  font-size: var(--regular-small-font) !important;
 }
 
 .sign-up span {
   margin-left: 5px;
   cursor: pointer;
-  color: var(--sirim-blue-color);
+  color: var(--sirim-blue-color) !important;
   font-size: var(--regular-small-font);
 }
 
@@ -243,10 +245,9 @@
   transition: all .4s ease;
 }
 
-.box-margin p {
-  color: var(--sirim-text-default);
-  font-size: var(--regular-small-font);
-  margin: 0;
+.footer-name p {
+  color: var(--sirim-text-muted);
+  font-size: var(--regular-medium-font);
 }
 
 @media (max-width: 1132px) {
@@ -379,5 +380,8 @@
 
   .login-box-content {
     height: 100%;
+  }
+  .footer-name p {
+    font-size: var(--regular-default-font);
   }
 }
