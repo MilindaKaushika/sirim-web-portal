@@ -65,6 +65,8 @@ html, body {
   --mat-logout-btn: #E9E8F4;
   --navbar-hover-color: #E5E5EB;
   --sirim-blue-text-color: #1E1B8C;
+  --sirim-login-text-color: #FFFFFF;
+  --sirim-login-sub-text-color: #E5E5EB;
 
   /*Mat-Input*/
   --sirim-input-bg: #FFFFFF;
@@ -164,6 +166,8 @@ html, body {
   --mat-logout-btn: #334155;
   --navbar-hover-color: #64748B;
   --sirim-blue-text-color: #ffffff;
+  --sirim-login-text-color: #FFFFFF;
+  --sirim-login-sub-text-color: #9CA3AF;
 
   /*Mat-Table*/
   --mat-table-header: #64748B;
