@@ -1,4 +1,6 @@
 import {NgModule} from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import {BrowserModule} from '@angular/platform-browser';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCheckboxModule} from '@angular/material/checkbox';
@@ -43,6 +45,8 @@ import { CreateAccountComponent } from './create-account/create-account.componen
 
   ],
   imports: [
+    ReactiveFormsModule,
+    MatFormFieldModule,
     BrowserModule,
     MatPaginatorModule,
     MatDatepickerModule,

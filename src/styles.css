@@ -830,6 +830,11 @@ tr.mat-row:hover {
   top: 0 !important;
 }
 
+.mat-error {
+  color: var(--sirim-error-primary);
+  margin-top: 20px;
+}
+
 /*Input Field (Small) Size (32px)*/
 .small-size .mat-form-field-infix {
   display: block;
