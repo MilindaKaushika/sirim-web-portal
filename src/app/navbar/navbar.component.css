@@ -315,4 +315,8 @@ dl, ol, ul {
   .nav-list.open {
     right: 0;
   }
+
+  .primary-small-btn {
+    margin-left: 0;
+  }
 }
