@@ -30,6 +30,7 @@ import { LoginComponent } from './login/login.component';
 import { DashboardImporterComponent } from './dashboard-importer/dashboard-importer.component';
 import { DashboardCoaapplicationComponent } from './dashboard-coaapplication/dashboard-coaapplication.component';
 import { CreateAccountComponent } from './create-account/create-account.component';
+import { UserRegistrationComponent } from './user-registration/user-registration.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { CreateAccountComponent } from './create-account/create-account.componen
     DashboardImporterComponent,
     DashboardCoaapplicationComponent,
     CreateAccountComponent,
+    UserRegistrationComponent,
 
   ],
   imports: [

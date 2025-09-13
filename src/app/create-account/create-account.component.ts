@@ -39,4 +39,7 @@ export class CreateAccountComponent implements OnInit {
   goSignIn() {
     this.router.navigate(['/login']);
   }
+  goUserRegistration(){
+    this.router.navigate(['/user-registration']);
+  }
 }

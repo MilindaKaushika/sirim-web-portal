@@ -247,6 +247,7 @@ dl, ol, ul {
 
 .primary-small-btn {
   width: 100px;
+  margin-left: 10px;
 }
 
 #menu-icon {
