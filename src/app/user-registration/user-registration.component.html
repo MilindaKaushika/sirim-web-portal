@@ -1,5 +1,5 @@
 <app-navbar></app-navbar>
-<form>
+<form [formGroup]="registrationForm">
   <section class="main-content">
     <div class="sub-content">
       <h1>Create Account</h1>
@@ -9,13 +9,19 @@
           <div class="form-field">
             <span>Company Name <i class="input-required"> *</i></span>
             <mat-form-field appearance="outline" class="large-size">
-              <input matInput placeholder="Enter Company Name Here"/>
+              <input matInput placeholder="Enter Company Name Here" formControlName="companyName"/>
+              <mat-error *ngIf="registrationForm.get('companyName')?.hasError('required') && registrationForm.get('companyName')?.touched">
+                Company Name is required
+              </mat-error>
             </mat-form-field>
           </div>
           <div class="form-field">
             <span>Business Registration Number<i class="input-required"> *</i></span>
             <mat-form-field appearance="outline" class="large-size">
-              <input matInput placeholder="SSM/ROC/Foreign ID"/>
+              <input matInput placeholder="SSM/ROC/Foreign ID" formControlName="businessRegNo"/>
+              <mat-error *ngIf="registrationForm.get('businessRegNo')?.hasError('required') && registrationForm.get('businessRegNo')?.touched">
+                Business Registration Number is required
+              </mat-error>
             </mat-form-field>
           </div>
         </div>
@@ -23,7 +29,10 @@
           <div class="form-field">
             <span>Company Address  <i class="input-required"> *</i></span>
             <mat-form-field appearance="outline" class="large-size">
-              <input matInput placeholder="Enter Company Address Here"/>
+              <input matInput placeholder="Enter Company Address Here" formControlName="companyAddress"/>
+              <mat-error *ngIf="registrationForm.get('companyAddress')?.hasError('required') && registrationForm.get('companyAddress')?.touched">
+                Company Address is required
+              </mat-error>
             </mat-form-field>
           </div>
         </div>
@@ -36,31 +45,70 @@
           <div class="form-field">
             <span>Contact Person Name <i class="input-required"> *</i></span>
             <mat-form-field appearance="outline" class="large-size">
-              <input matInput placeholder="Enter Contact Person Name Here"/>
+              <input matInput placeholder="Enter Contact Person Name Here" formControlName="contactPersonName"/>
+              <mat-error *ngIf="registrationForm.get('contactPersonName')?.hasError('required') && registrationForm.get('contactPersonName')?.touched">
+                Contact Person Name is required
+              </mat-error>
             </mat-form-field>
           </div>
           <div class="form-field">
             <span>Contact Person Position<i class="input-required"> *</i></span>
             <mat-form-field appearance="outline" class="large-size">
-              <mat-select placeholder="Select Contact Person Position">
-                <mat-option value="1">Active</mat-option>
-                <mat-option value="2">Inactive</mat-option>
-                <mat-option value="3">Active</mat-option>
+              <mat-select placeholder="Select Contact Person Position" formControlName="contactPersonPosition">
+                <mat-option value="manager">Manager</mat-option>
+                <mat-option value="director">Director</mat-option>
+                <mat-option value="employee">Employee</mat-option>
               </mat-select>
+              <mat-error *ngIf="registrationForm.get('contactPersonPosition')?.hasError('required') && registrationForm.get('contactPersonPosition')?.touched">
+                Contact Person Position is required
+              </mat-error>
             </mat-form-field>
           </div>
         </div>
         <div class="mat-row">
           <div class="form-field">
             <span>Phone Number <i class="input-required"> *</i></span>
-            <mat-form-field appearance="outline" class="large-size">
-              <input matInput placeholder="Enter Phone Number Here"/>
-            </mat-form-field>
+
+            <div class="phone-full-width">
+              <mat-form-field appearance="outline" class="large-size phone-code-input-width">
+                <mat-select [(value)]="selectedCountry">
+                  <mat-option *ngFor="let country of countryCodes" [value]="country">
+                    <img [src]="country.flag" alt="{{country.country}} Flag" class="phone-flag-prefix"/>
+                    {{ country.country }} ({{ country.calling_code }})
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+              <mat-form-field appearance="outline" class="large-size phone-code-input-full-width">
+    <span matPrefix class="phone-input-label-right">
+      {{ selectedCountry.calling_code }}
+    </span>
+                <input
+                  matInput
+                  placeholder="Enter Valid Mobile No Here"
+                  formControlName="phoneNumber"
+                  name="phoneNumber"
+                  autocomplete="tel"
+                />
+                <mat-error *ngIf="registrationForm.get('phoneNumber')?.hasError('required') && registrationForm.get('phoneNumber')?.touched">
+                  Phone number is required
+                </mat-error>
+                <mat-error *ngIf="registrationForm.get('phoneNumber')?.hasError('pattern') && registrationForm.get('phoneNumber')?.touched">
+                  Phone number must be 7-15 digits
+                </mat-error>
+              </mat-form-field>
+            </div>
+
           </div>
           <div class="form-field">
             <span>Email Address <i class="input-required"> *</i></span>
             <mat-form-field appearance="outline" class="large-size">
-              <input matInput placeholder="Enter Email Address Here"/>
+              <input matInput placeholder="Enter Email Address Here" formControlName="emailAddress"/>
+              <mat-error *ngIf="registrationForm.get('emailAddress')?.hasError('required') && registrationForm.get('emailAddress')?.touched">
+                Email is required
+              </mat-error>
+              <mat-error *ngIf="registrationForm.get('emailAddress')?.hasError('email') && registrationForm.get('emailAddress')?.touched">
+                Enter a valid email
+              </mat-error>
             </mat-form-field>
           </div>
         </div>
@@ -68,7 +116,7 @@
           <div class="form-field">
             <span>Website</span>
             <mat-form-field appearance="outline" class="large-size">
-              <input matInput placeholder="Enter Web Site Here"/>
+              <input matInput placeholder="Enter Web Site Here" formControlName="website"/>
             </mat-form-field>
           </div>
         </div>

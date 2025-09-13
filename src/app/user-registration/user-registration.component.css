@@ -66,3 +66,15 @@
   font-size: var(--regular-default-font);
   font-weight: 700;
 }
+
+@media (max-width: 1024px) {
+  .phone-code-input-width {
+    width: 80px!important;
+  }
+}
+
+@media (max-width: 755px) {
+  .mat-row {
+    flex-direction: column;
+  }
+}
