@@ -68,7 +68,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(30, 27, 140, 0.5);
+  background: var(--sirim-processing-list);
   border-radius: 8px;
   border: 1px solid var(--sirim-text-muted);
 }

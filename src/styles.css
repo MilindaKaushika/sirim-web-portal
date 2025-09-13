@@ -92,8 +92,10 @@ html, body {
   /*Opacity Reduce Colors*/
   --sirim-secondary-bg-btn: rgba(30, 27, 140, 0.25);
   --sirim-logout-btn: rgba(156, 163, 175, 0.5);
+  --sirim-processing-list: rgba(30, 27, 140, 0.5);
   --dropdown-menu-list-inershadow: rgba(0, 0, 0, 0.1);
   --dropdown-menu-list-outershadow: rgba(0, 0, 0, 0.05);
+  --create-account-outershadow: rgba(17, 24, 39, 0.25);
 
   /*Typography Font Styles (Display)*/
   --h1-large-bold-font: 2.25rem; /*36px*/
@@ -198,6 +200,14 @@ html, body {
   /*Clock*/
   --sirim-clock-base: #0F172A;
   --sirim-clock-active-color: #ffffff;
+
+  /*Opacity Reduce Colors*/
+  --sirim-secondary-bg-btn: rgba(30, 27, 140, 0.25);
+  --sirim-logout-btn: rgba(156, 163, 175, 0.5);
+  --sirim-processing-list: rgba(30, 27, 140, 0.5);
+  --dropdown-menu-list-inershadow: rgba(0, 0, 0, 0.1);
+  --dropdown-menu-list-outershadow: rgba(0, 0, 0, 0.05);
+  --create-account-outershadow: rgba(17, 24, 39, 0.25);
 }
 
 /*Primary Buttons List*/
@@ -837,6 +847,10 @@ tr.mat-row:hover {
 .mat-error {
   color: var(--sirim-error-primary);
   margin-top: 20px;
+}
+
+.input-required{
+  color: var(--sirim-error-primary);
 }
 
 /*Input Field (Small) Size (32px)*/

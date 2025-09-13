@@ -68,7 +68,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(30, 27, 140, 0.5);
+  background: var(--sirim-processing-list);
   border-radius: 8px;
   border: 1px solid var(--sirim-text-muted);
 }
@@ -174,6 +174,14 @@
   font-size: var(--regular-medium-font) !important;
 }
 
+.create-box h3 {
+  width: 100%;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--sirim-text-default);
+  margin-bottom: 24px;
+}
+
 .border-line {
   background: url("/assets/icons/line.svg");
   height: 1px;
@@ -203,17 +211,18 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  word-break: break-word;
   padding: 12px;
   margin-bottom: 24px;
   align-self: stretch;
   border-radius: 4px;
   background: var(--sirim-bg-subtle);
-  box-shadow: 0 4px 8px 0 rgba(17, 24, 39, 0.25);
+  box-shadow: 0 4px 8px 0 var(--create-account-outershadow);
 }
 
 .user-type-box .icon-box {
-  width: 42px;
-  height: 42px;
+  min-width: 42px;
+  min-height: 42px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -237,7 +246,7 @@
   justify-content: center;
 }
 
-.custom-icon-button .mat-icon{
+.custom-icon-button .mat-icon {
   position: relative;
   color: var(--sirim-text-default);
   top: -2px;
@@ -245,8 +254,14 @@
   height: auto;
 }
 
+.custom-icon-button:hover {
+  background: var(--sirim-info-bg) !important;
+  color: var(--sirim-info-primary) !important;
+}
+
 .content-text {
   display: flex;
+  gap: 2px;
   flex-direction: column;
 }
 
@@ -261,6 +276,7 @@
 .user-type-box p {
   color: var(--sirim-text-subtle);
   font-size: var(--regular-small-font) !important;
+  line-height: 15px;
   font-weight: 400;
   margin: 0;
   padding: 0;
