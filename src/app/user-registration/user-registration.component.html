@@ -1,4 +1,73 @@
 <app-navbar></app-navbar>
-<p>user-registration works!</p>
-<button (click)="goToLogin()">Back to Login</button>
+<form>
+  <section class="main-content">
+    <div class="sub-content">
+      <h1>Create Account</h1>
+      <p>Complete your registration details</p>
+      <div class="form-group">
+        <div class="mat-row">
+          <div class="form-field">
+            <span>Company Name <i class="input-required"> *</i></span>
+            <mat-form-field appearance="outline" class="large-size">
+              <input matInput placeholder="Enter Company Name Here"/>
+            </mat-form-field>
+          </div>
+          <div class="form-field">
+            <span>Business Registration Number<i class="input-required"> *</i></span>
+            <mat-form-field appearance="outline" class="large-size">
+              <input matInput placeholder="SSM/ROC/Foreign ID"/>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="mat-row">
+          <div class="form-field">
+            <span>Company Address  <i class="input-required"> *</i></span>
+            <mat-form-field appearance="outline" class="large-size">
+              <input matInput placeholder="Enter Company Address Here"/>
+            </mat-form-field>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="form-group-topic">
+          <h2>Contact Person Details</h2>
+        </div>
+        <div class="mat-row">
+          <div class="form-field">
+            <span>Contact Person Name <i class="input-required"> *</i></span>
+            <mat-form-field appearance="outline" class="large-size">
+              <input matInput placeholder="Enter Contact Person Name Here"/>
+            </mat-form-field>
+          </div>
+          <div class="form-field">
+            <span>Contact Person Position<i class="input-required"> *</i></span>
+            <mat-form-field appearance="outline" class="large-size">
+              <mat-select placeholder="Select Contact Person Position">
+                <mat-option value="1">Active</mat-option>
+                <mat-option value="2">Inactive</mat-option>
+                <mat-option value="3">Active</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="mat-row">
+          <div class="form-field">
+            <span>Phone Number <i class="input-required"> *</i></span>
+            <mat-form-field appearance="outline" class="large-size">
+              <input matInput placeholder="Enter Phone Number Here"/>
+            </mat-form-field>
+          </div>
+          <div class="form-field">
+            <span>Email Address <i class="input-required"> *</i></span>
+            <mat-form-field appearance="outline" class="large-size">
+              <input matInput placeholder="Enter Email Address Here"/>
+            </mat-form-field>
+          </div>
+        </div>
+      </div>
+      <!--      <button (click)="goToLogin()">Back to Login</button>-->
+    </div>
+  </section>
+</form>
+
 <app-footer></app-footer>

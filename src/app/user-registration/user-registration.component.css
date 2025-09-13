@@ -1,0 +1,67 @@
+.main-content {
+  display: flex;
+  padding: 140px 8% 0 8%;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.sub-content {
+  display: flex;
+  padding: 32px;
+  width: 100%;
+  border-radius: 8px;
+  flex-direction: column;
+  align-items: flex-start;
+  background: var(--sirim-bg-base);
+  box-shadow: 0 0 20px 0 var(--dropdown-menu-list-outershadow);
+}
+
+.sub-content h1 {
+  font-size: var(--h2-large-medium-bold-font);
+  color: var(--sirim-text-strong);
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+}
+
+.sub-content p {
+  font-size: var(--regular-medium-font);
+  color: var(--sirim-text-muted);
+  margin-bottom: 32px;
+  font-weight: 400;
+  padding: 0;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.form-group .form-group-topic h2 {
+  font-size: var(--regular-default-font);
+  color: var(--sirim-blue-color);
+  font-weight: 700;
+  padding: 0;
+  margin: 0;
+}
+
+.mat-row {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
+
+.form-field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-field span {
+  color: var(--sirim-text-default);
+  font-size: var(--regular-default-font);
+  font-weight: 700;
+}
