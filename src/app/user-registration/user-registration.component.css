@@ -229,6 +229,16 @@
 }
 
 @media (max-width: 1024px) {
+  .sub-content h1 {
+    font-size: var(--h2-large-medium-bold-font);
+    transition: all .4s ease;
+  }
+
+  .sub-content p {
+    font-size: var(--regular-default-font);
+    transition: all .4s ease;
+  }
+
   .phone-code-input-width {
     width: 80px !important;
   }
@@ -247,6 +257,16 @@
 }
 
 @media (max-width: 755px) {
+  .sub-content h1 {
+    font-size: var(--h3-large-small-bold-font);
+    transition: all .4s ease;
+  }
+
+  .sub-content p {
+    font-size: var(--regular-small-font);
+    transition: all .4s ease;
+  }
+
   .mat-row {
     flex-direction: column;
   }
