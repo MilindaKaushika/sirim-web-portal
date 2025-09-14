@@ -62,11 +62,12 @@ p {
 .breadcrumb-bar-path mat-icon {
   color: var(--sirim-text-subtle);
   height: auto;
+  width: 35px;
 }
 
 @media (max-width: 350px) {
   .breadcrumb-bar-path {
-    max-width: 237px!important;
+    max-width: 237px !important;
   }
 }
 
@@ -97,6 +98,10 @@ p {
 }
 
 @media (max-width: 755px) {
+  .breadcrumb-bar-path mat-icon {
+    width: 24px;
+  }
+
   .menu-toggle {
     display: block;
     color: var(--sirim-text-strong);

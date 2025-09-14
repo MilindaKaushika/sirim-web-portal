@@ -101,7 +101,7 @@
     left: -100%;
     background-color: var(--sirim-bg-base) !important;
     height: calc(100vh - 247px) !important;
-    top: 247px !important;
+    top: 253px !important;
     width: 220px !important;
     padding: 10px !important;
     z-index: 600;
