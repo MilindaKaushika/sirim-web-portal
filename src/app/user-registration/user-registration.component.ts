@@ -4,6 +4,7 @@ import {Router} from '@angular/router';
 import {COUNTRY_CODES, CountryCode} from '../country-codes';
 import {MatIconRegistry} from '@angular/material/icon';
 import {DomSanitizer} from '@angular/platform-browser';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-user-registration',
@@ -15,7 +16,7 @@ export class UserRegistrationComponent implements OnInit {
   selectedCountry: CountryCode = this.countryCodes.find(c => c.calling_code === '+60') || this.countryCodes[0];
   selectedCountry1: CountryCode = this.countryCodes.find(c => c.calling_code === '+60') || this.countryCodes[0];
   registrationForm: FormGroup;
-
+  userType: 'importer' | 'manufacturer' | 'agent' | null = null;
   uploadedFiles: {
     loa: File[],
     id: File[],
@@ -38,6 +39,7 @@ export class UserRegistrationComponent implements OnInit {
 
   constructor(
     private router: Router,
+    private route: ActivatedRoute,
     private iconRegistry: MatIconRegistry,
     private sanitizer: DomSanitizer
   ) {
@@ -60,6 +62,7 @@ export class UserRegistrationComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.userType = this.route.snapshot.queryParamMap.get('type') as any;
   }
 
   get fullPhoneNumber(): string {

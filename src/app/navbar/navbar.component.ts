@@ -77,7 +77,7 @@ export class NavbarComponent implements OnInit {
 
   private isPublicRoute(url: string): boolean {
     const publicRoutes = ['/login', '/create-account', '/user-registration'];
-    return publicRoutes.includes(url);
+    return publicRoutes.some(route => url.startsWith(route));
   }
 
 }

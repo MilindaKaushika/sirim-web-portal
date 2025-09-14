@@ -39,7 +39,7 @@ export class CreateAccountComponent implements OnInit {
   goSignIn() {
     this.router.navigate(['/login']);
   }
-  goUserRegistration(){
-    this.router.navigate(['/user-registration']);
+  goUserRegistration(userType: 'importer' | 'manufacturer' | 'agent') {
+    this.router.navigate(['/user-registration'], { queryParams: { type: userType } });
   }
 }
