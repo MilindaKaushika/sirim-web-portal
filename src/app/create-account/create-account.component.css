@@ -171,6 +171,7 @@
   color: var(--sirim-text-muted);
   font-weight: 400;
   margin-bottom: 32px;
+  line-height: 20px;
   font-size: var(--regular-medium-font) !important;
 }
 
