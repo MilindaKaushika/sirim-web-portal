@@ -61,6 +61,7 @@ p {
 
 .breadcrumb-bar-path mat-icon {
   color: var(--sirim-text-subtle);
+  height: auto;
 }
 
 @media (max-width: 350px) {

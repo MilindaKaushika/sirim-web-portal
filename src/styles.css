@@ -629,6 +629,10 @@ tr.mat-row:hover {
   border-left: 3px solid var(--mat-row-line) !important;
 }
 
+.paginator-line .mat-form-field-appearance-legacy .mat-form-field-underline {
+  bottom: 0.25em;
+}
+
 .no-data-row {
   position: absolute;
   width: 100%;
