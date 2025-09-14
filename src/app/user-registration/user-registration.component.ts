@@ -4,7 +4,7 @@ import {Router} from '@angular/router';
 import {COUNTRY_CODES, CountryCode} from '../country-codes';
 import {MatIconRegistry} from '@angular/material/icon';
 import {DomSanitizer} from '@angular/platform-browser';
-import { ActivatedRoute } from '@angular/router';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-user-registration',
@@ -74,6 +74,31 @@ export class UserRegistrationComponent implements OnInit {
     const phone = this.registrationForm.get('phoneNumber1')?.value || '';
     return `${this.selectedCountry1.calling_code}${phone}`;
   }
+
+  get selectedUserType(): string {
+    switch (this.userType?.toLowerCase()) {
+      case 'importer':
+        return 'Importer';
+      case 'manufacturer':
+        return 'Manufacturer';
+      case 'agent':
+        return 'Agent';
+      default:
+        return '';
+    }
+  }
+
+  get certificateTitle(): string {
+    switch (this.userType?.toLowerCase()) {
+      case 'manufacturer':
+        return 'Foreign Certificate';
+      case 'importer':
+        return 'Company Certificate';
+      default:
+        return 'Company Certificate';
+    }
+  }
+
 
   goToLogin() {
     this.router.navigate(['/login']);
