@@ -8,7 +8,7 @@
 
 .sub-content {
   display: flex;
-  padding: 32px;
+  padding: 32px 32px 0;
   width: 100%;
   border-radius: 8px;
   flex-direction: column;
@@ -64,17 +64,181 @@
 .form-field span {
   color: var(--sirim-text-default);
   font-size: var(--regular-default-font);
+  word-break: break-word;
   font-weight: 700;
+}
+
+.upload-area-wrapper {
+  display: flex;
+  flex-direction: column;
+  border: 2px dashed var(--sirim-text-muted);
+  border-radius: 8px;
+  gap: 16px;
+  margin-top: 16px;
+  margin-bottom: 10px;
+  padding: 24px;
+}
+
+.upload-area {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+  margin-top: 8px;
+  cursor: pointer;
+  z-index: 1;
+  background-color: transparent;
+}
+
+.upload-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.upload-icon .mat-icon {
+  width: 36px;
+  height: auto;
+  color: var(--sirim-text-muted);
+}
+
+.upload-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.upload-main-text p {
+  color: var(--sirim-text-subtle);
+  font-size: var(--regular-default-font);
+  font-weight: 400;
+  margin: 0;
+}
+
+.upload-sub-text p {
+  color: var(--sirim-text-muted);
+  font-size: var(--regular-small-font);
+  font-weight: 400;
+  margin: 0;
+}
+
+.file-input {
+  display: none;
+}
+
+.upload-area-wrapper .upload-file-list {
+  display: flex;
+  position: relative;
+  z-index: 2;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: flex-start;
+  gap: 15px;
+}
+
+.upload-file-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.upload-file-list p {
+  color: var(--sirim-text-muted);
+  font-size: var(--regular-default-font);
+  font-weight: 400;
+  margin: 0;
+}
+
+.upload-area-wrapper .upload-file-item .icon-box {
+  width: 25px;
+  height: 25px;
+  position: relative;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background: var(--sirim-error-primary);
+  color: var(--sirim-login-text-color);
+  border-radius: 50%;
+}
+
+.button-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.second-row {
+  display: flex;
+  gap: 16px;
+}
+
+.secondary-middle-btn {
+  width: 135px;
+  transition: all .4s ease;
+}
+
+.primary-middle-btn {
+  width: 198px;
+}
+
+.border-line {
+  background: url("/assets/icons/line.svg");
+  height: 1px;
+  width: 100%;
+  margin-bottom: 32px;
+  margin-top: 10px;
+}
+
+.sign-in {
+  text-align: center;
+  width: 100%;
+}
+
+.sign-in p {
+  margin: 0;
+  color: var(--sirim-text-subtle) !important;
+  font-size: var(--regular-small-font) !important;
+}
+
+.sign-in span {
+  margin-left: 5px;
+  cursor: pointer;
+  color: var(--sirim-blue-color) !important;
+  font-size: var(--regular-small-font);
 }
 
 @media (max-width: 1024px) {
   .phone-code-input-width {
-    width: 80px!important;
+    width: 80px !important;
+  }
+
+  .secondary-middle-btn {
+    width: 100px;
   }
 }
 
 @media (max-width: 755px) {
   .mat-row {
+    flex-direction: column;
+  }
+
+  .button-wrapper {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .secondary-middle-btn, .primary-middle-btn {
+    width: 100%;
+  }
+
+  .second-row {
     flex-direction: column;
   }
 }

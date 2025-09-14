@@ -224,6 +224,19 @@ html, body {
   line-height: 0 !important;
 }
 
+.primary-middle-btn {
+  background-color: var(--sirim-blue-color);
+  color: var(--sirim-button-color);
+  font-size: var(--bold-medium-font);
+  height: 2.813rem; /* 45px */
+  border-radius: 4px;
+  font-weight: 700;
+  white-space: nowrap;
+  gap: 8px;
+  padding: 1.25rem !important;
+  line-height: 0 !important;
+}
+
 .primary-default-btn {
   background-color: var(--sirim-blue-color);
   color: var(--sirim-button-color);
@@ -292,6 +305,20 @@ html, body {
   white-space: nowrap;
   gap: 8px;
   padding: 1.25rem !important;
+  line-height: 0 !important;
+}
+
+.secondary-middle-btn {
+  background: transparent;
+  border: 1px solid var(--secondary-large-btn) !important;
+  color: var(--secondary-large-btn);
+  font-size: var(--bold-default-font);
+  height: 2.813rem; /* 45px */
+  border-radius: 4px;
+  font-weight: 700;
+  white-space: nowrap;
+  gap: 8px;
+  padding: 0.688rem !important;
   line-height: 0 !important;
 }
 

@@ -10,7 +10,8 @@
             <span>Company Name <i class="input-required"> *</i></span>
             <mat-form-field appearance="outline" class="large-size">
               <input matInput placeholder="Enter Company Name Here" formControlName="companyName"/>
-              <mat-error *ngIf="registrationForm.get('companyName')?.hasError('required') && registrationForm.get('companyName')?.touched">
+              <mat-error
+                *ngIf="registrationForm.get('companyName')?.hasError('required') && registrationForm.get('companyName')?.touched">
                 Company Name is required
               </mat-error>
             </mat-form-field>
@@ -19,7 +20,8 @@
             <span>Business Registration Number<i class="input-required"> *</i></span>
             <mat-form-field appearance="outline" class="large-size">
               <input matInput placeholder="SSM/ROC/Foreign ID" formControlName="businessRegNo"/>
-              <mat-error *ngIf="registrationForm.get('businessRegNo')?.hasError('required') && registrationForm.get('businessRegNo')?.touched">
+              <mat-error
+                *ngIf="registrationForm.get('businessRegNo')?.hasError('required') && registrationForm.get('businessRegNo')?.touched">
                 Business Registration Number is required
               </mat-error>
             </mat-form-field>
@@ -30,7 +32,8 @@
             <span>Company Address  <i class="input-required"> *</i></span>
             <mat-form-field appearance="outline" class="large-size">
               <input matInput placeholder="Enter Company Address Here" formControlName="companyAddress"/>
-              <mat-error *ngIf="registrationForm.get('companyAddress')?.hasError('required') && registrationForm.get('companyAddress')?.touched">
+              <mat-error
+                *ngIf="registrationForm.get('companyAddress')?.hasError('required') && registrationForm.get('companyAddress')?.touched">
                 Company Address is required
               </mat-error>
             </mat-form-field>
@@ -46,7 +49,8 @@
             <span>Contact Person Name <i class="input-required"> *</i></span>
             <mat-form-field appearance="outline" class="large-size">
               <input matInput placeholder="Enter Contact Person Name Here" formControlName="contactPersonName"/>
-              <mat-error *ngIf="registrationForm.get('contactPersonName')?.hasError('required') && registrationForm.get('contactPersonName')?.touched">
+              <mat-error
+                *ngIf="registrationForm.get('contactPersonName')?.hasError('required') && registrationForm.get('contactPersonName')?.touched">
                 Contact Person Name is required
               </mat-error>
             </mat-form-field>
@@ -59,7 +63,8 @@
                 <mat-option value="director">Director</mat-option>
                 <mat-option value="employee">Employee</mat-option>
               </mat-select>
-              <mat-error *ngIf="registrationForm.get('contactPersonPosition')?.hasError('required') && registrationForm.get('contactPersonPosition')?.touched">
+              <mat-error
+                *ngIf="registrationForm.get('contactPersonPosition')?.hasError('required') && registrationForm.get('contactPersonPosition')?.touched">
                 Contact Person Position is required
               </mat-error>
             </mat-form-field>
@@ -89,10 +94,12 @@
                   name="phoneNumber"
                   autocomplete="tel"
                 />
-                <mat-error *ngIf="registrationForm.get('phoneNumber')?.hasError('required') && registrationForm.get('phoneNumber')?.touched">
+                <mat-error
+                  *ngIf="registrationForm.get('phoneNumber')?.hasError('required') && registrationForm.get('phoneNumber')?.touched">
                   Phone number is required
                 </mat-error>
-                <mat-error *ngIf="registrationForm.get('phoneNumber')?.hasError('pattern') && registrationForm.get('phoneNumber')?.touched">
+                <mat-error
+                  *ngIf="registrationForm.get('phoneNumber')?.hasError('pattern') && registrationForm.get('phoneNumber')?.touched">
                   Phone number must be 7-15 digits
                 </mat-error>
               </mat-form-field>
@@ -103,10 +110,12 @@
             <span>Email Address <i class="input-required"> *</i></span>
             <mat-form-field appearance="outline" class="large-size">
               <input matInput placeholder="Enter Email Address Here" formControlName="emailAddress"/>
-              <mat-error *ngIf="registrationForm.get('emailAddress')?.hasError('required') && registrationForm.get('emailAddress')?.touched">
+              <mat-error
+                *ngIf="registrationForm.get('emailAddress')?.hasError('required') && registrationForm.get('emailAddress')?.touched">
                 Email is required
               </mat-error>
-              <mat-error *ngIf="registrationForm.get('emailAddress')?.hasError('email') && registrationForm.get('emailAddress')?.touched">
+              <mat-error
+                *ngIf="registrationForm.get('emailAddress')?.hasError('email') && registrationForm.get('emailAddress')?.touched">
                 Enter a valid email
               </mat-error>
             </mat-form-field>
@@ -121,7 +130,141 @@
           </div>
         </div>
       </div>
-      <!--      <button (click)="goToLogin()">Back to Login</button>-->
+      <div class="form-group">
+        <div class="form-group-topic">
+          <h2>Agent Company Details</h2>
+        </div>
+        <div class="mat-row">
+          <div class="form-field">
+            <span>Agent Company Name</span>
+            <mat-form-field appearance="outline" class="large-size">
+              <input matInput placeholder="Enter Agent Company Name Here"/>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="mat-row">
+          <div class="form-field">
+            <span>Agent Contact Person Name </span>
+            <mat-form-field appearance="outline" class="large-size">
+              <input matInput placeholder="Enter Agent Contact Person Name Here"/>
+            </mat-form-field>
+          </div>
+          <div class="form-field">
+            <span>Agent Contact Person Position</span>
+            <mat-form-field appearance="outline" class="large-size">
+              <mat-select placeholder="Select Agent Contact Person Position">
+                <mat-option value="manager">Manager</mat-option>
+                <mat-option value="director">Director</mat-option>
+                <mat-option value="employee">Employee</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="mat-row">
+          <div class="form-field">
+            <span>Agent Phone Number</span>
+
+            <div class="phone-full-width">
+              <mat-form-field appearance="outline" class="large-size phone-code-input-width">
+                <mat-select [(value)]="selectedCountry1">
+                  <mat-option *ngFor="let country of countryCodes" [value]="country">
+                    <img [src]="country.flag" alt="{{country.country}} Flag" class="phone-flag-prefix"/>
+                    {{ country.country }} ({{ country.calling_code }})
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+              <mat-form-field appearance="outline" class="large-size phone-code-input-full-width">
+    <span matPrefix class="phone-input-label-right">
+      {{ selectedCountry1.calling_code }}
+    </span>
+                <input
+                  matInput
+                  placeholder="Enter Valid Mobile No Here"
+                  formControlName="phoneNumber1"
+                  name="phoneNumber"
+                  autocomplete="tel"
+                />
+              </mat-form-field>
+            </div>
+
+          </div>
+          <div class="form-field">
+            <span>Agent Email Address</span>
+            <mat-form-field appearance="outline" class="large-size">
+              <input matInput placeholder="Enter Agent Email Address Here"/>
+            </mat-form-field>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="form-group-topic">
+          <h2>Required Documents</h2>
+        </div>
+        <div class="mat-row">
+          <div class="form-field">
+            <span>Company Certificate<i class="input-required"> *</i></span>
+            <div class="upload-area-wrapper">
+              <div class="upload-area" (click)="onUploadClick()"
+                   (dragover)="onDragOver($event)"
+                   (dragleave)="onDragLeave($event)"
+                   (drop)="onDrop($event)"
+                   [class.dragover]="isDragOver">
+                <input
+                  type="file"
+                  id="fileInput"
+                  class="file-input"
+                  accept=".pdf"
+                  multiple
+                  (change)="onFileSelected($event)"
+                />
+
+
+                <div class="upload-content">
+                  <div class="upload-icon">
+                    <mat-icon svgIcon="upload"></mat-icon>
+                  </div>
+
+                  <div class="upload-text">
+                    <div class="upload-main-text">
+                      <p>Click to upload or drag and drop</p>
+                    </div>
+                    <div class="upload-sub-text">
+                      <p> PDF files only. Max 10MB</p>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+              <div *ngIf="uploadedFiles.length" class="upload-file-list">
+                <div *ngFor="let file of uploadedFiles; let i = index" class="upload-file-item">
+                  <p>{{ file.name }}</p>
+                  <div class="icon-box" (click)="removeFile(i)">
+                    <mat-icon svgIcon="close"></mat-icon>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="button-wrapper">
+          <div class="fist-row">
+            <button mat-button class="secondary-middle-btn">Save Draft</button>
+          </div>
+          <div class="second-row">
+            <button mat-button class="secondary-middle-btn">Clear Form</button>
+            <button mat-button class="secondary-middle-btn">Print Form</button>
+            <button mat-button class="primary-middle-btn">Submit Registration</button>
+          </div>
+        </div>
+      </div>
+      <div class="border-line"></div>
+      <div class="form-group">
+        <div class="sign-in">
+          <p>Already have an account?<span (click)="goToLogin()">Sign In</span></p>
+        </div>
+      </div>
     </div>
   </section>
 </form>
