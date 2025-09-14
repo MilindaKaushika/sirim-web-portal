@@ -68,15 +68,27 @@
   font-weight: 700;
 }
 
+.group-upload {
+  display: flex;
+  width: 100%;
+  gap: 24px;
+  transition: all .4s ease;
+}
+
 .upload-area-wrapper {
   display: flex;
   flex-direction: column;
+  width: 100%;
   border: 2px dashed var(--sirim-text-muted);
   border-radius: 8px;
   gap: 16px;
   margin-top: 16px;
   margin-bottom: 10px;
   padding: 24px;
+}
+
+.upload-area-wrapper, .padding-reduce {
+  margin-top: 5px;
 }
 
 .upload-area {
@@ -117,6 +129,7 @@
   color: var(--sirim-text-subtle);
   font-size: var(--regular-default-font);
   font-weight: 400;
+  word-break: break-word;
   margin: 0;
 }
 
@@ -124,6 +137,7 @@
   color: var(--sirim-text-muted);
   font-size: var(--regular-small-font);
   font-weight: 400;
+  word-break: break-word;
   margin: 0;
 }
 
@@ -222,11 +236,23 @@
   .secondary-middle-btn {
     width: 100px;
   }
+
+  .group-upload {
+    gap: 10px;
+  }
+
+  .upload-main-text p {
+    line-height: 17px;
+  }
 }
 
 @media (max-width: 755px) {
   .mat-row {
     flex-direction: column;
+  }
+
+  .form-field {
+    width: 100%;
   }
 
   .button-wrapper {
@@ -241,4 +267,10 @@
   .second-row {
     flex-direction: column;
   }
+
+  .group-upload {
+    flex-direction: column;
+    width: 100%;
+  }
 }
+

@@ -2,8 +2,8 @@ import {Component, OnInit} from '@angular/core';
 import {FormGroup, FormControl, Validators} from '@angular/forms';
 import {Router} from '@angular/router';
 import {COUNTRY_CODES, CountryCode} from '../country-codes';
-import {MatIconRegistry} from "@angular/material/icon";
-import {DomSanitizer} from "@angular/platform-browser";
+import {MatIconRegistry} from '@angular/material/icon';
+import {DomSanitizer} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-user-registration',
@@ -15,18 +15,35 @@ export class UserRegistrationComponent implements OnInit {
   selectedCountry: CountryCode = this.countryCodes.find(c => c.calling_code === '+60') || this.countryCodes[0];
   selectedCountry1: CountryCode = this.countryCodes.find(c => c.calling_code === '+60') || this.countryCodes[0];
   registrationForm: FormGroup;
-  isDragOver = false;
-  uploadedFileName: string | null = null;
-  uploadedFiles: File[] = [];
 
-  constructor(private router: Router, private iconRegistry: MatIconRegistry,
-              private sanitizer: DomSanitizer) {
-    iconRegistry.addSvgIcon(
-      'upload',
-      sanitizer.bypassSecurityTrustResourceUrl('assets/icons/upload.svg'));
-    iconRegistry.addSvgIcon(
-      'close',
-      sanitizer.bypassSecurityTrustResourceUrl('assets/icons/close.svg'));
+  uploadedFiles: {
+    loa: File[],
+    id: File[],
+    agent: File[],
+    certificate: File[]
+  } = {
+    loa: [],
+    id: [],
+    agent: [],
+    certificate: []
+  };
+
+
+  isDragOver = {
+    loa: false,
+    id: false,
+    agent: false,
+    certificate: false
+  };
+
+  constructor(
+    private router: Router,
+    private iconRegistry: MatIconRegistry,
+    private sanitizer: DomSanitizer
+  ) {
+
+    iconRegistry.addSvgIcon('upload', sanitizer.bypassSecurityTrustResourceUrl('assets/icons/upload.svg'));
+    iconRegistry.addSvgIcon('close', sanitizer.bypassSecurityTrustResourceUrl('assets/icons/close.svg'));
 
 
     this.registrationForm = new FormGroup({
@@ -35,14 +52,8 @@ export class UserRegistrationComponent implements OnInit {
       companyAddress: new FormControl('', Validators.required),
       contactPersonName: new FormControl('', Validators.required),
       contactPersonPosition: new FormControl('', Validators.required),
-      phoneNumber: new FormControl('', [
-        Validators.required,
-        Validators.pattern('^[0-9]{7,15}$')
-      ]),
-      emailAddress: new FormControl('', [
-        Validators.required,
-        Validators.email
-      ]),
+      phoneNumber: new FormControl('', [Validators.required, Validators.pattern('^[0-9]{7,15}$')]),
+      emailAddress: new FormControl('', [Validators.required, Validators.email]),
       website: new FormControl(''),
       phoneNumber1: new FormControl('')
     });
@@ -65,12 +76,14 @@ export class UserRegistrationComponent implements OnInit {
     this.router.navigate(['/login']);
   }
 
-  onUploadClick(): void {
-    const fileInput = document.getElementById('fileInput') as HTMLInputElement;
-    fileInput?.click();
+
+  onUploadClick(type: 'loa' | 'id' | 'agent' | 'certificate'): void {
+    const input = document.getElementById(`fileInput-${type}`) as HTMLInputElement;
+    input?.click();
   }
 
-  onFileSelected(event: Event): void {
+
+  onFileSelected(event: Event, type: 'loa' | 'id' | 'agent' | 'certificate'): void {
     const input = event.target as HTMLInputElement;
     const files = input.files;
 
@@ -94,23 +107,23 @@ export class UserRegistrationComponent implements OnInit {
       validFiles.push(file);
     }
 
-    this.uploadedFiles = [...this.uploadedFiles, ...validFiles];
+    this.uploadedFiles[type] = [...this.uploadedFiles[type], ...validFiles];
   }
 
 
-  onDragOver(event: DragEvent): void {
+  onDragOver(event: DragEvent, type: 'loa' | 'id' | 'agent' | 'certificate'): void {
     event.preventDefault();
-    this.isDragOver = true;
+    this.isDragOver[type] = true;
   }
 
-  onDragLeave(event: DragEvent): void {
+  onDragLeave(event: DragEvent, type: 'loa' | 'id' | 'agent' | 'certificate'): void {
     event.preventDefault();
-    this.isDragOver = false;
+    this.isDragOver[type] = false;
   }
 
-  onDrop(event: DragEvent): void {
+  onDrop(event: DragEvent, type: 'loa' | 'id' | 'agent' | 'certificate'): void {
     event.preventDefault();
-    this.isDragOver = false;
+    this.isDragOver[type] = false;
 
     const files = event.dataTransfer?.files;
     if (!files) return;
@@ -133,15 +146,10 @@ export class UserRegistrationComponent implements OnInit {
       validFiles.push(file);
     }
 
-    this.uploadedFiles = [...this.uploadedFiles, ...validFiles];
-
-    const dataTransfer = new DataTransfer();
-    this.uploadedFiles.forEach(file => dataTransfer.items.add(file));
-    const fileInput = document.getElementById('fileInput') as HTMLInputElement;
-    fileInput.files = dataTransfer.files;
+    this.uploadedFiles[type] = [...this.uploadedFiles[type], ...validFiles];
   }
 
-  removeFile(index: number): void {
-    this.uploadedFiles.splice(index, 1);
+  removeFile(index: number, type: 'loa' | 'id' | 'agent' | 'certificate'): void {
+    this.uploadedFiles[type].splice(index, 1);
   }
 }

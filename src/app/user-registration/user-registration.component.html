@@ -196,49 +196,51 @@
           </div>
         </div>
       </div>
-      <div class="form-group">
+      <div class="form-group" *ngIf="true">
         <div class="form-group-topic">
           <h2>Required Documents</h2>
         </div>
+
         <div class="mat-row">
           <div class="form-field">
             <span>Company Certificate<i class="input-required"> *</i></span>
             <div class="upload-area-wrapper">
-              <div class="upload-area" (click)="onUploadClick()"
-                   (dragover)="onDragOver($event)"
-                   (dragleave)="onDragLeave($event)"
-                   (drop)="onDrop($event)"
-                   [class.dragover]="isDragOver">
+              <div class="upload-area"
+                   (click)="onUploadClick('certificate')"
+                   (dragover)="onDragOver($event, 'certificate')"
+                   (dragleave)="onDragLeave($event, 'certificate')"
+                   (drop)="onDrop($event, 'certificate')"
+                   [class.dragover]="isDragOver.certificate">
+
                 <input
                   type="file"
-                  id="fileInput"
+                  id="fileInput-certificate"
                   class="file-input"
                   accept=".pdf"
                   multiple
-                  (change)="onFileSelected($event)"
+                  (change)="onFileSelected($event, 'certificate')"
                 />
-
 
                 <div class="upload-content">
                   <div class="upload-icon">
                     <mat-icon svgIcon="upload"></mat-icon>
                   </div>
-
                   <div class="upload-text">
                     <div class="upload-main-text">
                       <p>Click to upload or drag and drop</p>
                     </div>
                     <div class="upload-sub-text">
-                      <p> PDF files only. Max 10MB</p>
+                      <p>PDF files only. Max 10MB</p>
                     </div>
                   </div>
-
                 </div>
               </div>
-              <div *ngIf="uploadedFiles.length" class="upload-file-list">
-                <div *ngFor="let file of uploadedFiles; let i = index" class="upload-file-item">
+
+
+              <div *ngIf="uploadedFiles.certificate?.length" class="upload-file-list">
+                <div *ngFor="let file of uploadedFiles.certificate; let i = index" class="upload-file-item">
                   <p>{{ file.name }}</p>
-                  <div class="icon-box" (click)="removeFile(i)">
+                  <div class="icon-box" (click)="removeFile(i, 'certificate')">
                     <mat-icon svgIcon="close"></mat-icon>
                   </div>
                 </div>
@@ -246,7 +248,162 @@
             </div>
           </div>
         </div>
+
       </div>
+
+      <div class="form-group" *ngIf="false">
+        <div class="form-group-topic">
+          <h2>Required Documents</h2>
+        </div>
+        <div class="mat-row">
+          <div class="form-field">
+            <div class="group-upload">
+              <div class="form-field">
+                <span>Letter of Authorization<i class="input-required"> *</i></span>
+                <div class="upload-area-wrapper padding-reduce">
+                  <div class="upload-area"
+                       (click)="onUploadClick('loa')"
+                       (dragover)="onDragOver($event, 'loa')"
+                       (dragleave)="onDragLeave($event, 'loa')"
+                       (drop)="onDrop($event, 'loa')"
+                       [class.dragover]="isDragOver.loa">
+
+                    <input
+                      type="file"
+                      id="fileInput-loa"
+                      class="file-input"
+                      accept=".pdf"
+                      multiple
+                      (change)="onFileSelected($event, 'loa')"
+                    />
+
+                    <div class="upload-content">
+                      <div class="upload-icon">
+                        <mat-icon svgIcon="upload"></mat-icon>
+                      </div>
+                      <div class="upload-text">
+                        <div class="upload-main-text">
+                          <p>Click to upload or drag and drop</p>
+                        </div>
+                        <div class="upload-sub-text">
+                          <p>PDF files only. Max 10MB</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div *ngIf="uploadedFiles.loa.length" class="upload-file-list">
+                    <div *ngFor="let file of uploadedFiles.loa; let i = index" class="upload-file-item">
+                      <p>{{ file.name }}</p>
+                      <div class="icon-box" (click)="removeFile(i, 'loa')">
+                        <mat-icon svgIcon="close"></mat-icon>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="form-field">
+                <span>Identity Document<i class="input-required"> *</i></span>
+                <div class="upload-area-wrapper padding-reduce">
+                  <div class="upload-area"
+                       (click)="onUploadClick('id')"
+                       (dragover)="onDragOver($event, 'id')"
+                       (dragleave)="onDragLeave($event, 'id')"
+                       (drop)="onDrop($event, 'id')"
+                       [class.dragover]="isDragOver.id">
+
+                    <input
+                      type="file"
+                      id="fileInput-id"
+                      class="file-input"
+                      accept=".pdf"
+                      multiple
+                      (change)="onFileSelected($event, 'id')"
+                    />
+
+                    <div class="upload-content">
+                      <div class="upload-icon">
+                        <mat-icon svgIcon="upload"></mat-icon>
+                      </div>
+                      <div class="upload-text">
+                        <div class="upload-main-text">
+                          <p>Click to upload or drag and drop</p>
+                        </div>
+                        <div class="upload-sub-text">
+                          <p>PDF files only. Max 10MB</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div *ngIf="uploadedFiles.id.length" class="upload-file-list">
+                    <div *ngFor="let file of uploadedFiles.id; let i = index" class="upload-file-item">
+                      <p>{{ file.name }}</p>
+                      <div class="icon-box" (click)="removeFile(i, 'id')">
+                        <mat-icon svgIcon="close"></mat-icon>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="form-field">
+                <span>Agent Authorization Letter</span>
+                <div class="upload-area-wrapper padding-reduce">
+                  <div class="upload-area"
+                       (click)="onUploadClick('agent')"
+                       (dragover)="onDragOver($event, 'agent')"
+                       (dragleave)="onDragLeave($event, 'agent')"
+                       (drop)="onDrop($event, 'agent')"
+                       [class.dragover]="isDragOver.agent">
+
+                    <input
+                      type="file"
+                      id="fileInput-agent"
+                      class="file-input"
+                      accept=".pdf"
+                      multiple
+                      (change)="onFileSelected($event, 'agent')"
+                    />
+
+                    <div class="upload-content">
+                      <div class="upload-icon">
+                        <mat-icon svgIcon="upload"></mat-icon>
+                      </div>
+                      <div class="upload-text">
+                        <div class="upload-main-text">
+                          <p>Click to upload or drag and drop</p>
+                        </div>
+                        <div class="upload-sub-text">
+                          <p>PDF files only. Max 10MB</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div *ngIf="uploadedFiles.agent.length" class="upload-file-list">
+                    <div *ngFor="let file of uploadedFiles.agent; let i = index" class="upload-file-item">
+                      <p>{{ file.name }}</p>
+                      <div class="icon-box" (click)="removeFile(i, 'agent')">
+                        <mat-icon svgIcon="close"></mat-icon>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
       <div class="form-group">
         <div class="button-wrapper">
           <div class="fist-row">
