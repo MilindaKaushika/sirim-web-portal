@@ -31,6 +31,8 @@ import { DashboardImporterComponent } from './dashboard-importer/dashboard-impor
 import { DashboardCoaapplicationComponent } from './dashboard-coaapplication/dashboard-coaapplication.component';
 import { CreateAccountComponent } from './create-account/create-account.component';
 import { UserRegistrationComponent } from './user-registration/user-registration.component';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { ResetPasswordComponent } from './reset-password/reset-password.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +46,8 @@ import { UserRegistrationComponent } from './user-registration/user-registration
     DashboardCoaapplicationComponent,
     CreateAccountComponent,
     UserRegistrationComponent,
+    ForgotPasswordComponent,
+    ResetPasswordComponent,
 
   ],
   imports: [

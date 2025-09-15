@@ -1,7 +1,9 @@
 <form [formGroup]="loginForm">
   <div class="wrapper">
     <div class="left-col">
-      <div class="content">
+      <div class="content" [ngClass]="{
+  'collapsed-content': currentView === 'forgotPassword'
+}">
         <div class="logo">
           <img src="assets/images/logo-main.jpg" alt="">
         </div>
@@ -57,14 +59,15 @@
     <div class="right-col">
       <div class="login-box-content">
         <div class="box-margin">
-          <div class="login-box">
+          <div class="login-box" *ngIf="currentView === 'login'">
             <h2>Welcome Back</h2>
             <p>Sign in to access your dashboard</p>
             <div class="input-row">
               <p>Username</p>
               <mat-form-field class="large-size" appearance="outline">
                 <input matInput placeholder="Enter your username" formControlName="username"/>
-                <mat-error *ngIf="loginForm.get('username')?.hasError('required') && loginForm.get('username')?.touched">
+                <mat-error
+                  *ngIf="loginForm.get('username')?.hasError('required') && loginForm.get('username')?.touched">
                   Username is required
                 </mat-error>
               </mat-form-field>
@@ -72,16 +75,19 @@
             <div class="input-row">
               <p>Password</p>
               <mat-form-field class="large-size" appearance="outline">
-                <input matInput [type]="hide ? 'password' : 'text'" placeholder="Enter your password" formControlName="password">
+                <input matInput [type]="hide ? 'password' : 'text'" placeholder="Enter your password"
+                       formControlName="password">
                 <button type="button" [type]="hide ? 'password' : 'text'" mat-icon-button matSuffix
                         (click)="hide = !hide"
                         [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
                   <i class='bx' [ngClass]="hide ? 'bx-hide' : 'bx-show'" style="color: #9CA3AF; font-size: 20px;"></i>
                 </button>
-                <mat-error *ngIf="loginForm.get('password')?.hasError('required') && loginForm.get('password')?.touched">
+                <mat-error
+                  *ngIf="loginForm.get('password')?.hasError('required') && loginForm.get('password')?.touched">
                   Password is required
                 </mat-error>
-                <mat-error *ngIf="loginForm.get('password')?.hasError('minlength') && loginForm.get('password')?.touched">
+                <mat-error
+                  *ngIf="loginForm.get('password')?.hasError('minlength') && loginForm.get('password')?.touched">
                   Minimum 6 characters required
                 </mat-error>
               </mat-form-field>
@@ -92,7 +98,7 @@
                   Remember Me
                 </mat-checkbox>
               </div>
-              <div class="forgot-password">
+              <div class="forgot-password" (click)="showForgotPassword()">
                 <p>Forgot Password?</p>
               </div>
             </div>
@@ -102,6 +108,9 @@
               <p>Don't have an account?<span (click)="onSigninClick()">Sign Up</span></p>
             </div>
           </div>
+          <app-forgot-password *ngIf="currentView === 'forgotPassword'" (back)="showLogin()"
+                               (goToResetPassword)="showResetPassword()"></app-forgot-password>
+          <app-reset-password *ngIf="currentView === 'resetPassword'" (back)="showLogin()"></app-reset-password>
           <div class="footer-name">
             <p> © 2025 SIRIM Berhad. All rights reserved.</p>
           </div>

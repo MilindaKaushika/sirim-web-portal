@@ -13,7 +13,7 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 export class LoginComponent implements OnInit {
   loginForm: FormGroup;
   hide = true;
-
+  currentView: 'login' | 'forgotPassword' | 'resetPassword' = 'login';
   constructor(private router: Router, private iconRegistry: MatIconRegistry,
               private sanitizer: DomSanitizer, private fb: FormBuilder,private authService: AuthService ) {
     this.loginForm = this.fb.group({
@@ -48,6 +48,17 @@ export class LoginComponent implements OnInit {
     this.router.navigate(['/create-account']);
   }
 
+  showLogin() {
+    this.currentView = 'login';
+  }
+
+  showForgotPassword() {
+    this.currentView = 'forgotPassword';
+  }
+
+  showResetPassword() {
+    this.currentView = 'resetPassword';
+  }
 
   ngOnInit(): void {
   }
