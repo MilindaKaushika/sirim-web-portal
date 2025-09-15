@@ -62,6 +62,8 @@ html, body {
   --sirim-bg-color: #FFFFFF;
 
   /*Special Colors*/
+  --sirim-logo-color: #FDB90F;
+  --sirim-logo-name-color: #213e9a;
   --mat-logout-btn: #E9E8F4;
   --navbar-hover-color: #E5E5EB;
   --sirim-blue-text-color: #1E1B8C;
@@ -165,6 +167,8 @@ html, body {
   --sirim-extra-gray: #94A3B8;
 
   /*Special Colors*/
+  --sirim-logo-color: #FDB90F;
+  --sirim-logo-name-color: #1E3A8A;;
   --mat-logout-btn: #334155;
   --navbar-hover-color: #64748B;
   --sirim-blue-text-color: #ffffff;
@@ -1087,5 +1091,14 @@ tr.mat-row:hover {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes draw {
+  0% {
+    stroke-dashoffset: 4500;
+  }
+  100% {
+    stroke-dashoffset: 0;
   }
 }

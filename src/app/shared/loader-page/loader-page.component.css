@@ -1,0 +1,35 @@
+.loading-page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  z-index: 1500000;
+  align-items: center;
+  justify-content: center;
+}
+
+#svg {
+  height: 150px;
+  width: 150px;
+  stroke: var(--sirim-logo-color);
+  fill-opacity: 0;
+  stroke-width: 3px;
+  color: var(--sirim-logo-color);
+  stroke-dasharray: 4500;
+  animation: draw 8s ease;
+}
+
+.name-container {
+  height: 30px;
+  overflow: hidden;
+}
+
+.logo-name .mat-icon {
+  width: 100%;
+  color: var(--sirim-logo-name-color);
+  max-width: 150px;
+}

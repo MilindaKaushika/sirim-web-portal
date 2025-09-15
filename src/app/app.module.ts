@@ -33,6 +33,7 @@ import { CreateAccountComponent } from './create-account/create-account.componen
 import { UserRegistrationComponent } from './user-registration/user-registration.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
+import { LoaderPageComponent } from './shared/loader-page/loader-page.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import { ResetPasswordComponent } from './reset-password/reset-password.componen
     UserRegistrationComponent,
     ForgotPasswordComponent,
     ResetPasswordComponent,
+    LoaderPageComponent,
 
   ],
   imports: [
