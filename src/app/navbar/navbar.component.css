@@ -1,6 +1,6 @@
 header {
   position: fixed;
-  background: var(--sirim-bg-base);
+  background: var(--sirim-navbar-bg);
   top: 0;
   right: 0;
   width: 100%;
@@ -13,7 +13,7 @@ header {
 }
 
 .theme-toggle-btn {
-  color: var(--sirim-text-muted);
+  color: var(--sirim-login-text-color);
   border-radius: 50%;
   display: flex;
   font-size: 1.5rem;
@@ -55,7 +55,7 @@ dl, ol, ul {
   display: inline-block;
   margin: 0 16px;
   font-weight: 700;
-  color: var(--sirim-text-subtle);
+  color: var(--sirim-login-text-color);
   font-size: var(--regular-medium-font);
   line-height: 18px;
   cursor: pointer;
@@ -245,15 +245,18 @@ dl, ol, ul {
   transform: rotate(180deg);
 }
 
-.primary-small-btn {
-  width: 100px;
+.secondary-small-btn {
+  width: 107px;
+  height: 40px;
   margin-left: 10px;
+  border: 1px solid var(--sirim-button-color) !important;
+  color: var(--sirim-button-color);
 }
 
 #menu-icon {
   font-size: 34px;
   z-index: 10001;
-  color: var(--sirim-text-strong);
+  color: var(--sirim-button-color);
   cursor: pointer;
   display: none;
 }
@@ -308,6 +311,7 @@ dl, ol, ul {
 
   .nav-list li a {
     display: block;
+    color: var(--sirim-text-strong);
     margin: 15px 0 !important;
     font-size: 1.25rem !important;
   }

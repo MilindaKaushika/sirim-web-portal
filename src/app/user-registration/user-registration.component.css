@@ -224,11 +224,9 @@
 }
 
 .border-line {
-  background: url("/assets/icons/line.svg");
-  height: 1px;
+ border: 1px solid  var(--sirim-navy-color);
   width: 100%;
   margin-bottom: 32px;
-  margin-top: 10px;
 }
 
 .sign-in {

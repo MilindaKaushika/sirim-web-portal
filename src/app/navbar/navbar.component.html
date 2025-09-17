@@ -1,7 +1,7 @@
 <body>
 <header>
   <ul>
-    <img class="logo" ngSrc="assets/images/logo.png" alt="" height="48" width="197">
+    <img class="logo" ngSrc="assets/images/logo.svg" alt="" height="48" width="197">
     <div class="nav-list" [class.open]="menuOpen">
       <li><a>Home</a></li>
       <li><a>About Us</a></li>
@@ -26,7 +26,7 @@
       </div>
     </div>
 
-    <button mat-button class="primary-small-btn" *ngIf="showLoginButton"  (click)="router.navigate(['/login'])">Log In</button>
+    <button mat-button class="secondary-small-btn" *ngIf="showLoginButton"  (click)="router.navigate(['/login'])">Log In</button>
 
     <div class="btn" tabindex="0" *ngIf="isLoggedIn">
       <div class="profile-img">

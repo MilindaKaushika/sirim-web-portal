@@ -52,6 +52,9 @@ html, body {
   --sirim-extra-red: #EF4444;
   --sirim-extra-gray: #6B7280;
 
+  /*Nav-bar*/
+  --sirim-navbar-bg: #141066;
+
   /*Mat-Table*/
   --mat-table-header: #E9E8F4;
   --mat-row-line: #FDECCE;
@@ -113,6 +116,8 @@ html, body {
   --h6-heading-small-font: 1rem; /*16px*/
 
   /*Body (Bold)*/
+  --bold-ex-large-font: 2.5rem; /*40px*/
+  --bold-md-large-font: 1.875rem; /*30px*/
   --bold-large-font: 1.125rem; /*18px*/
   --bold-medium-font: 1rem; /*16px*/
   --bold-default-font: 0.875rem; /*14px*/
@@ -121,6 +126,8 @@ html, body {
   --bold-tiny-font: 0.5rem; /*8px*/
 
   /*Body (Regular)*/
+  --regular-ex-large-font: 2.5rem; /*40px*/
+  --regular-md-large-font: 1.875rem; /*30px*/
   --regular-large-font: 1.125rem; /*18px*/
   --regular-medium-font: 1rem; /*16px*/
   --regular-default-font: 0.875rem; /*14px*/
@@ -174,6 +181,9 @@ html, body {
   --sirim-blue-text-color: #ffffff;
   --sirim-login-text-color: #FFFFFF;
   --sirim-login-sub-text-color: #9CA3AF;
+
+  /*Nav-bar*/
+  --sirim-navbar-bg: #0F172A;
 
   /*Mat-Table*/
   --mat-table-header: #64748B;
