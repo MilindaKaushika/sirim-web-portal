@@ -94,6 +94,9 @@ html, body {
   --sirim-clock-base: #1E1B8C;
   --sirim-clock-active-color: #ffffff;
 
+  /*Mat-Calender*/
+  --sirim-calnder-active-color: #ffffff;
+
   /*Opacity Reduce Colors*/
   --sirim-secondary-bg-btn: rgba(30, 27, 140, 0.25);
   --sirim-logout-btn: rgba(156, 163, 175, 0.5);
@@ -214,6 +217,9 @@ html, body {
   /*Clock*/
   --sirim-clock-base: #0F172A;
   --sirim-clock-active-color: #ffffff;
+
+  /*Mat-Calender*/
+  --sirim-calnder-active-color: #ffffff;
 
   /*Opacity Reduce Colors*/
   --sirim-secondary-bg-btn: rgba(30, 27, 140, 0.25);
@@ -1022,6 +1028,7 @@ tr.mat-row:hover {
 
 .mat-calendar-body-selected {
   background-color: var(--sirim-blue-color) !important;
+  color: var(--sirim-calnder-active-color) !important;
 }
 
 .mat-calendar-table-header-divider::after {
