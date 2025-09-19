@@ -29,8 +29,7 @@
 }
 
 .collapsed-content {
-  height: auto !important;
-  overflow: hidden;
+  position: relative;
 }
 
 .logo img {

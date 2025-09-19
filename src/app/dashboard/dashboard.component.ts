@@ -33,6 +33,12 @@ export class DashboardComponent implements OnInit {
     iconRegistry.addSvgIcon(
       'guide',
       sanitizer.bypassSecurityTrustResourceUrl('assets/icons/guide.svg'));
+    iconRegistry.addSvgIcon(
+      'help',
+      sanitizer.bypassSecurityTrustResourceUrl('assets/icons/help.svg'));
+    iconRegistry.addSvgIcon(
+      'team',
+      sanitizer.bypassSecurityTrustResourceUrl('assets/icons/team.svg'));
   }
 
   onSidebarToggle(open: boolean) {

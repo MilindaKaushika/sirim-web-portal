@@ -81,6 +81,14 @@
   width: 8px;
 }
 
+.topic {
+  width: 100%;
+  max-width: 100%;
+  word-break: break-word;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
 .topic h4 {
   color: var(--sirim-blue-text-color);
   font-size: var(--h4-heading-large-font);
@@ -89,7 +97,13 @@
   overflow: hidden;
   text-overflow: ellipsis;
   margin: 0;
-  width: 230px;
+  transition: all 0.3s ease;
+}
+
+.topic.expanded h4 {
+  white-space: normal;
+  overflow: visible;
+  text-overflow: unset;
 }
 
 .path-list p {
@@ -104,6 +118,12 @@
   height: auto;
   width: 25px;
   transition: all .4s ease;
+}
+
+@media (max-width: 415px) {
+  .topic h4{
+    max-width: 230px;
+  }
 }
 
 @media (max-width: 755px) {

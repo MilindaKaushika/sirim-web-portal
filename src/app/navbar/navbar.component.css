@@ -124,11 +124,13 @@ dl, ol, ul {
   box-sizing: border-box;
 }
 
-.btn {
+.button-out {
   display: flex;
   position: relative;
   align-items: center;
   justify-content: center;
+  border-radius: 8px;
+  padding: 8px;
   background: var(--mat-logout-btn);
   box-shadow: 0 0 5px 0 var(--sirim-logout-btn);
   gap: 8px;
@@ -178,6 +180,7 @@ dl, ol, ul {
 .logout-icon {
   width: 1rem;
   height: 1rem;
+  cursor: pointer;
   flex-shrink: 0;
 }
 

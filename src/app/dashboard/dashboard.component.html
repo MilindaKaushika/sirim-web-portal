@@ -3,6 +3,7 @@
   <app-dashboard-breadcrumb (menuToggled)="onSidebarToggle($event)"></app-dashboard-breadcrumb>
   <div class="main-container">
     <div class="left-sidebar" [class.show]="menuOpen">
+      <div>
       <div class="slide-btn" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
            routerLink="/dashboard/home">
         <mat-icon svgIcon="menu"></mat-icon>
@@ -12,10 +13,7 @@
         <mat-icon svgIcon="application"></mat-icon>
         <p>COA Applications</p>
       </div>
-      <div class="slide-btn">
-        <mat-icon svgIcon="mrf-application"></mat-icon>
-        <p>MRF Applications</p>
-      </div>
+
       <div class="slide-btn">
         <mat-icon svgIcon="quota"></mat-icon>
         <p>Quota Requests</p>
@@ -32,19 +30,30 @@
         <mat-icon svgIcon="guide"></mat-icon>
         <p>Guides & Fees</p>
       </div>
-
-      <p class="topic-color">Product Categories</p>
-      <div class="slide-btn">
-        <p>Flour</p>
+      <div class="border-line"></div>
+      <p class="topic-color">Track Application</p>
+      <div class="search-bar">
+        <div class="search">
+          <input type="text" class="searchTerm" placeholder="Application Number">
+          <button type="submit" class="searchButton">
+            <img src="assets/icons/search.svg" alt="">
+          </button>
+        </div>
       </div>
-      <div class="slide-btn">
-        <p>Iron & Steel</p>
+      <div class="topic-colors">
+        <p>Enter the application number and search to view real-time status and CoA progress.</p>
       </div>
-      <div class="slide-btn">
-        <p>IMetal Scrap & Waste</p>
-      </div>
-      <div class="slide-btn">
-        <p>Tyre</p>
+        </div>
+      <div class="bottom-align">
+        <div class="border-line padding-align-border"></div>
+        <div class="slide-btn padding-align-topic">
+          <mat-icon svgIcon="help"></mat-icon>
+          <p>Help Center</p>
+        </div>
+        <div class="slide-btn padding-align-topic">
+          <mat-icon svgIcon="team"></mat-icon>
+          <p>Terms & Policies</p>
+        </div>
       </div>
     </div>
     <div class="right-sidebar">
