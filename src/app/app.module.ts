@@ -34,6 +34,8 @@ import { UserRegistrationComponent } from './user-registration/user-registration
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
 import { LoaderPageComponent } from './shared/loader-page/loader-page.component';
+import { MessageBoxComponent } from './shared/message-box/message-box.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -50,6 +52,7 @@ import { LoaderPageComponent } from './shared/loader-page/loader-page.component'
     ForgotPasswordComponent,
     ResetPasswordComponent,
     LoaderPageComponent,
+    MessageBoxComponent,
 
   ],
   imports: [
@@ -74,6 +77,7 @@ import { LoaderPageComponent } from './shared/loader-page/loader-page.component'
     NgbDropdownModule,
     RouterModule,
     AppRoutingModule,
+    MatDialogModule,
     NgOptimizedImage
   ],
   providers: [],
