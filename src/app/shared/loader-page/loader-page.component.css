@@ -17,7 +17,7 @@
   width: 150px;
   stroke: var(--sirim-logo-color);
   fill-opacity: 0;
-  stroke-width: 3px;
+  stroke-width: 5px;
   color: var(--sirim-logo-color);
   stroke-dasharray: 4500;
   animation: draw 8s ease;
